@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  // @include for-size(tablet-portrait) {
+  //   width: 480px;
+  // }
+  // @include for-size(tablet-landscape) {
+  //   width: 768px;
+  // }
+  @include for-size(desktop) {
+    min-width: 950px;
+    max-width: 1320px;
+    // width: 1320px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+.container.our-mission {
+  @include for-size(mobile) {
+  }
+}

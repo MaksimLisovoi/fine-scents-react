@@ -1,0 +1,7 @@
+.header-all-products {
+  background-image: url('../../assets/images/imgs/all-products-imgs/hero-all-products.jpg');
+
+  @include for-size(desktop) {
+    background-image: url('../../assets/images/imgs/all-products-imgs/hero-all-products-desktop.jpg');
+  }
+}

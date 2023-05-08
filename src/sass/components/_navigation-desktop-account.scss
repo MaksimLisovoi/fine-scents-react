@@ -1,0 +1,105 @@
+//ACCOUNT//
+.account-block {
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+.flex-space-between-position {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation-desktop__button {
+  @extend .navigation-desktop__header;
+  padding: 0;
+  order: -1;
+
+  @include for-size(desktop) {
+    order: 0;
+  }
+}
+
+.account__sign-in-form {
+  // display: none;
+}
+.account__sign-in-form--input {
+  width: 340px;
+  height: 50px;
+  padding-left: 24px;
+
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+
+  border: none;
+  background: rgba(247, 245, 243, 0.7);
+
+  &.margin-bottom-40 {
+    margin-bottom: 40px;
+  }
+
+  &::placeholder {
+    color: #000000;
+  }
+}
+
+.account__sign-in-form--paragraph {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+
+  color: #060606;
+}
+
+.account__sign-in-form--btn {
+  width: 340px;
+  height: 50px;
+  margin-top: 26px;
+
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #f7f5f3;
+  background: #000000;
+}
+
+.forgot-pass {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+
+  margin-top: 30px;
+  margin-bottom: 55px;
+}
+
+.account-block {
+  padding-top: 150px;
+  @include for-size(desktop) {
+    padding-right: 43px;
+    padding-left: 43px;
+  }
+}
+.account-block__btn {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+
+  color: rgba(0, 0, 0, 0.3);
+}
+.btn-position {
+  margin-bottom: 32px;
+}
+.account-block__btn.active {
+  text-decoration-line: underline;
+
+  color: #000000;
+}

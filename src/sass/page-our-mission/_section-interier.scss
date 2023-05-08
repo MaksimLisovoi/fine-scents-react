@@ -1,0 +1,120 @@
+.section-interier {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  background-color: $gray-background-color;
+
+  @include for-size(desktop) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+.section-interier__heading {
+  // padding-top: 15px;
+
+  @include for-size(desktop) {
+    font-size: 50px;
+    margin-bottom: 42px;
+    padding: 0;
+  }
+}
+.section-interier__block {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    justify-content: center;
+    padding-bottom: 0;
+  }
+}
+.section-interier__block2 {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 60px;
+
+  @include for-size(desktop) {
+    align-items: flex-start;
+    padding-bottom: 80px;
+  }
+}
+.section-interier__group2:not(:last-child) {
+  margin-bottom: 60px;
+
+  @include for-size(desktop) {
+    margin-bottom: 160px;
+  }
+}
+.section-interier__group2 img {
+  width: 100%;
+}
+.desktop-paragraph__block {
+  @include for-size(desktop) {
+    max-width: 1075px;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.section-interier__img {
+  width: 155px;
+
+  @include for-size(desktop) {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.section-interier__pic {
+  @media (min-width: 800px) {
+    // display: none;
+  }
+  @media (max-width: 1320px) {
+    width: 100%;
+  }
+}
+
+.section-interier__img:not(:last-child) {
+  margin-right: 30px;
+
+  @include for-size(desktop) {
+    margin-right: 134px;
+  }
+}
+.margin-rigth-24 {
+  margin-right: 24px;
+}
+
+.section-interier__group {
+  margin-bottom: 60px;
+  @include for-size(desktop) {
+    margin-bottom: 150px;
+  }
+}
+
+.section-paragraph-desktop {
+  display: none;
+  @include for-size(desktop) {
+    display: block;
+  }
+}
+.section-paragraph-mobile {
+  display: block;
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+
+.section-interier__desktop-block {
+  @include for-size(desktop) {
+    width: 416px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.img-desktop-position {
+  @include for-size(desktop) {
+    order: -1;
+    margin-bottom: 80px;
+  }
+}

@@ -1,0 +1,234 @@
+.footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+  background-color: $primary-black-color;
+  color: $footer-text-color;
+
+  @include for-size(desktop) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer-flex__desktop {
+  @include for-size(desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.footer__newsletter {
+  margin-bottom: 74px;
+
+  @include for-size(desktop) {
+    margin-bottom: 82px;
+    margin-right: 134px;
+  }
+}
+
+.footer__newsletter--header {
+  font-family: 'Cormorant';
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.02;
+
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+
+  margin-bottom: 28px;
+
+  @include for-size(desktop) {
+    font-size: 62px;
+    margin-bottom: 52px;
+  }
+}
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__form--input {
+  height: 44px;
+  width: 100%;
+
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 34px;
+
+  background-color: $primary-black-color;
+  border: 0.5px solid #e5dfd3;
+
+  @include for-size(desktop) {
+    max-width: 526px;
+  }
+}
+
+.footer__form--checkbox {
+  font-family: 'Roboto';
+
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 1.5;
+
+  letter-spacing: 0.04em;
+
+  @include for-size(desktop) {
+    max-width: 526px;
+
+    font-size: 14px;
+  }
+}
+.footer-features__link {
+  display: block;
+
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  color: $footer-text-color;
+
+  @include for-size(desktop) {
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+  }
+}
+
+.footer-features__link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.footer-features__link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.footer__header {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include for-size(desktop) {
+    font-size: 16px;
+  }
+}
+.footer-features {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 70px;
+
+  @include for-size(desktop) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 50%;
+    padding-bottom: 0;
+    // padding-right: 116px;
+  }
+  // border-bottom: 1px solid rgba(229, 223, 211, 0.5);
+}
+.footer-features__block {
+  margin-top: 40px;
+
+  @include for-size(desktop) {
+    margin-top: 48px;
+    margin-bottom: 70px;
+  }
+}
+.footer-features__settings {
+  @include for-size(desktop) {
+    order: 3;
+  }
+}
+.footer-features > div {
+  // width: 33%;
+  width: 50%;
+  @include for-size(phone) {
+    width: 50%;
+  }
+}
+
+.footer-features > div:not(:last-child) {
+  margin-bottom: 80px;
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
+}
+
+.footer-features__block > li:not(:last-child) {
+  margin-bottom: 6px;
+
+  @include for-size(desktop) {
+    margin-bottom: 12px;
+  }
+}
+
+.footer-features__language {
+  margin-bottom: 6px;
+  @include for-size(desktop) {
+    margin-bottom: 12px;
+  }
+}
+.footer-features__item {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  background-color: $primary-black-color;
+  color: $footer-text-color;
+
+  border: none;
+  @include for-size(desktop) {
+    font-size: 16px;
+  }
+}
+.footer-logo {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 32px;
+  border-top: 1px solid rgba(229, 223, 211, 0.5);
+}
+.footer-logo__svg {
+  @include for-size(desktop) {
+    width: 176px;
+    height: 17px;
+  }
+}
+
+.footer-logo__caption {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+
+  color: $footer-text-color;
+
+  @include for-size(desktop) {
+    font-size: 16px;
+  }
+}

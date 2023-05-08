@@ -1,0 +1,69 @@
+.header-applying {
+  background-image: url('../../assets/images/imgs/applying-imgs/applying-hero.jpg');
+
+  @include for-size(desktop) {
+    background-image: url('../../assets/images/imgs/applying-imgs/applying-hero-desktop.jpg');
+  }
+}
+
+//SECTION LIVINGROOM//
+
+.section-applying {
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  background-color: $gray-background-color;
+
+  @include for-size(desktop) {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+}
+.section-bathroom {
+  background-color: $primary-white-color;
+}
+.section-livingroom-block {
+  @include for-size(desktop) {
+    display: flex;
+    align-items: center;
+    padding-bottom: 80px;
+  }
+}
+.applying__heading {
+  font-family: 'Cormorant';
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+
+  margin-bottom: 60px;
+
+  @include for-size(desktop) {
+    font-size: 68px;
+    margin-bottom: 110px;
+  }
+}
+.section-h3-applying {
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+  }
+}
+.applying__text-block {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #868483;
+
+  @include for-size(desktop) {
+    border-bottom: none;
+
+    width: 35%;
+    margin-right: 134px;
+  }
+}
+.applying-img {
+  margin-top: 50px;
+
+  width: 100%;
+  @include for-size(desktop) {
+    margin-top: 0;
+  }
+}

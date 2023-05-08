@@ -1,0 +1,198 @@
+.section-gallery {
+  // display: none;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 130px;
+  background-color: $gallery-background-color;
+
+  @include for-size(desktop) {
+    display: block;
+    padding-top: 120px;
+    padding-bottom: 75px;
+  }
+}
+
+.section-gallery__header {
+  @extend .section-h3;
+
+  margin-bottom: 50px;
+  color: $gallery-text-color;
+
+  @include for-size(desktop) {
+    position: absolute;
+  }
+}
+.section-gallery__gallery {
+  @include for-size(desktop) {
+    position: relative;
+    // display: flex;
+    margin-left: 220px;
+  }
+}
+.slider-controls__position {
+  position: relative;
+}
+.section-gallery__picture-block {
+  display: none;
+
+  @include for-size(desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-bottom: 46px;
+  }
+}
+.margin-right-200 {
+  margin-right: 200px;
+}
+.section-gallery__slideshow-header {
+  display: none;
+  @include for-size(desktop) {
+    display: block;
+    position: absolute;
+    z-index: 2;
+
+    font-family: 'Cormorant';
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+
+    color: rgba(229, 223, 211, 0.5);
+  }
+}
+.section-gallery__slideshow-header.top {
+  top: 40%;
+  left: -21%;
+}
+.section-gallery__slideshow-header.bottom {
+  top: 50%;
+  left: -4%;
+}
+.section-gallery__slideshow-controls {
+  display: none;
+
+  @include for-size(desktop) {
+    // position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.section-gallery__slideshow-btn {
+  position: absolute;
+  bottom: 30%;
+  z-index: 10;
+}
+.gallery-prev {
+  left: 12px;
+}
+.gallery-next {
+  right: 12px;
+}
+.section-gallery__description-block {
+  display: none;
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 24px;
+
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: rgba(229, 223, 211, 0.5);
+  }
+}
+.section-gallery__gallery--image {
+  @include for-size(desktop) {
+    margin: 0 auto;
+  }
+}
+.section-gallery__picture-desktop {
+  display: none;
+  @include for-size(desktop) {
+    display: block;
+  }
+}
+.swiper-pagination.section-gallery__pagination,
+.main-swiper-pagination.section-gallery__pagination {
+  position: static;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  // position: static;
+  color: $gallery-text-color;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+
+  @include for-size(desktop) {
+    position: absolute;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 9px;
+    padding-left: 13px;
+    text-align: left;
+  }
+}
+.swiper-pagination-current {
+  color: $gallery-page-color;
+}
+
+.gallery-swiper-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+  // flex: 0 1 100%;
+}
+
+.section-gallery__scrollbar {
+  background-color: $gallery-text-color;
+  height: 1.5px;
+
+  display: flex;
+  align-items: center;
+
+  @include for-size(desktop) {
+    width: 72px;
+  }
+}
+
+.section-gallery__scrollbar .swiper-scrollbar-drag {
+  height: 3px;
+  background-color: $gallery-page-color;
+}
+
+// .section-gallery {
+//   &__picture-block {
+//     opacity: 0.5;
+//     transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1s,
+//       opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1s;
+//     transform: translate3d(-20%, 0, 0);
+//   }
+//   &__main-img img {
+//     width: 100%;
+//   }
+//   &__main-img {
+//     opacity: 0.5;
+//     transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1s,
+//       opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1s;
+//     transform: translate3d(-20%, 0, 0);
+//   }
+// }
+
+// .gallery-swiper-slider .swiper-slide.swiper-slide-active .section-gallery__picture-block,
+// .gallery-swiper-slider .swiper-slide.swiper-slide-active .section-gallery__main-img {
+//   transform: translate3d(0, 0, 0);
+//   opacity: 1;
+// }

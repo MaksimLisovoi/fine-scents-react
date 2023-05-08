@@ -1,0 +1,49 @@
+//SHOP//
+
+.shop__list {
+  margin-top: 90px;
+}
+.shop__list > li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.shop__list--header {
+  font-family: 'Cormorant';
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+
+  color: #f7f5f3;
+}
+.shop-item::after {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+  margin-top: 15%;
+
+  background-image: url('../../assets/images/shop-menu-arrow.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.shop-item {
+  max-width: 274px;
+  background-repeat: no-repeat;
+  // height: 274px;
+  height: calc((100vh - 240px) / 3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-item.scents {
+  background-image: url('../../assets/images/imgs/desktop-menu/scents-shop.jpg');
+
+  // background-size: 228px 274px;
+}
+.shop-item.applying {
+  background-image: url('../../assets/images/imgs/desktop-menu/applying-shop.jpg');
+}
+.shop-item.all {
+  background-image: url('../../assets/images/imgs/desktop-menu/all-shop.jpg');
+}

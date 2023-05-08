@@ -1,0 +1,161 @@
+.section-material {
+  padding-top: 100px;
+  padding-bottom: 140px;
+
+  background-color: $gray-background-color;
+
+  @include for-size(desktop) {
+    padding-top: 120px;
+    padding-bottom: 200px;
+  }
+  // .section-material__first-img
+
+  &__first-img img {
+    max-width: 100%;
+  }
+
+  // .section-material__description
+
+  &__description {
+    font-family: 'Cormorant';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+
+    margin-top: 60px;
+    margin-bottom: 140px;
+
+    @include for-size(desktop) {
+      font-size: 40px;
+      max-width: 856px;
+
+      margin-top: 60px;
+      margin-bottom: 160px;
+    }
+  }
+
+  // .section-material__block
+
+  &__block {
+    @include for-size(desktop) {
+      display: flex;
+    }
+  }
+
+  // .section-material__header
+
+  &__header {
+    font-family: 'Cormorant';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+
+    letter-spacing: -0.03em;
+
+    margin-bottom: 30px;
+
+    @include for-size(desktop) {
+      font-size: 52px;
+      width: 275px;
+    }
+  }
+
+  // .section-material__img-block
+
+  &__img-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // .section-material__img
+
+  &__img:first-child {
+    margin-right: 14px;
+  }
+
+  &__img:last-child {
+    // margin-top: 30px;
+
+    @include for-size(desktop) {
+      margin-top: 0;
+    }
+  }
+
+  &__img:not(:last-child) {
+    @include for-size(desktop) {
+      margin-right: 24px;
+    }
+  }
+
+  // .section-material__img--caption
+
+  &__img--caption {
+    margin-top: 12px;
+  }
+
+  // .section-material__img--second
+
+  &__img--second {
+    margin-right: 18px;
+  }
+
+  // .section-material__descr-block
+
+  &__descr-block {
+    // min-width: 339px;
+    margin-top: 104px;
+
+    @include for-size(desktop) {
+      order: -1;
+
+      width: 416px;
+      padding-top: 232px;
+      margin-top: 0;
+      margin-right: 134px;
+    }
+  }
+
+  // .section-material__descr-block--header
+
+  &__descr-block--header {
+    width: 50%;
+
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+
+    @include for-size(desktop) {
+      margin-bottom: 50px;
+      font-size: 18px;
+    }
+  }
+
+  // .section-material__descr-block--paragraph
+
+  &__descr-block--paragraph {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.6;
+
+    letter-spacing: 0.04em;
+
+    @include for-size(desktop) {
+      font-size: 16px;
+    }
+  }
+
+  &__descr-block--paragraph:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include for-size(desktop) {
+      margin-bottom: 20px;
+    }
+  }
+}

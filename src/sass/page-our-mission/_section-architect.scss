@@ -1,0 +1,155 @@
+.section-architect {
+  padding-top: 100px;
+  padding-bottom: 140px;
+
+  background-color: $secondary-gray-background-color;
+  @include for-size(desktop) {
+    padding-top: 150px;
+    padding-bottom: 240px;
+  }
+}
+.section-architect__block1 {
+  @include for-size(desktop) {
+    margin-bottom: 35%;
+  }
+}
+.section-architect__heading {
+  width: 253px;
+  @include for-size(desktop) {
+    width: 50%;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+.section-architect__heading-2 {
+  @include for-size(desktop) {
+    font-size: 50px;
+  }
+}
+.section-architect__content-block {
+  margin-right: 0;
+  margin-left: 50%;
+
+  @include for-size(desktop) {
+    width: 416px;
+  }
+}
+.section-architect__img {
+  margin-top: 60px;
+  margin-bottom: 30px;
+
+  @include for-size(desktop) {
+    margin-bottom: 80px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.section-paragraph-architect {
+  margin-top: 30px;
+}
+.section-architect__img-block {
+  padding-top: 280px;
+  padding-bottom: 120px;
+
+  position: relative;
+}
+
+.section-architect__img-absolute {
+  position: absolute;
+
+  bottom: 40%;
+
+  @include for-size(desktop) {
+    bottom: 55%;
+  }
+}
+.section-architect__img-rel {
+  width: 252px;
+  margin-left: auto;
+  margin-right: 0;
+
+  @include for-size(desktop) {
+    width: 916px;
+  }
+}
+
+.section-architect__caption {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 10px;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-top: 12px;
+
+  transform: rotateX(90);
+
+  @include for-size(desktop) {
+    font-size: 18px;
+  }
+}
+.section-architect__heading-margin {
+  margin-bottom: 30px;
+
+  @include for-size(desktop) {
+    margin-bottom: 80px;
+  }
+}
+.section-architect__img2 {
+  margin: 0 auto;
+  width: 260px;
+
+  @include for-size(desktop) {
+    width: 526px;
+    margin: 0;
+    margin-left: auto;
+  }
+}
+.section-architect__position-imgs {
+  position: relative;
+
+  padding-top: 64px;
+  padding-bottom: 210px;
+
+  @include for-size(desktop) {
+    padding-top: 145px;
+    padding-bottom: 150px;
+  }
+}
+// .postion-absolute__desktop{
+//   position: absolute;
+
+// }
+.section-architect__img2-rel {
+  width: 50%;
+  margin-left: 50%;
+
+  @include for-size(desktop) {
+    position: absolute;
+    bottom: 70%;
+    width: 566px;
+    margin: 0;
+  }
+}
+.section-architect__img2-abs {
+  position: absolute;
+
+  width: 50%;
+  left: 30px;
+  top: 220px;
+
+  @include for-size(desktop) {
+    margin: 0 auto;
+    position: initial;
+    width: 416px;
+  }
+}
+.caption-hidden-desktop {
+  @include for-size(desktop) {
+    display: none;
+  }
+}
+.caption-hidden-mobile {
+  display: none;
+}

@@ -1,0 +1,42 @@
+//ABOUT//
+
+.navigation-desktop__section-about {
+  padding-top: 145px;
+  display: block;
+  // padding-bottom: 570px;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 12px;
+    margin-left: 50%;
+
+    background-image: url('../../assets/images/section-about-arrow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+.navigation-desktop__section-about .about-header {
+  font-family: 'Cormorant';
+  font-weight: 600;
+  font-size: 38px;
+  letter-spacing: -0.03em;
+
+  width: 110px;
+  margin-bottom: 45px;
+}
+.about-paragraph {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4;
+
+  width: 190px;
+
+  letter-spacing: 0.02em;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
