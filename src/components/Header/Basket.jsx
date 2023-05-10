@@ -1,17 +1,17 @@
 import basketImg from '../../assets/images/imgs/desktop-menu/basket-img.jpg';
 
-export const Basket = ({ isOpenBasketMenu, closeBasketMenu, isHomePage }) => {
+export const Basket = ({ isOpenBasketMenu, toggleBasketMenu, isHomePage }) => {
   return (
     <div
       className={`navigation-desktop__item basket ${
         isOpenBasketMenu ? 'is-open' : ''
-      }   ${!isHomePage ? 'not-main-page' : ''}`}
+      }   ${!isHomePage ? 'not-main-page' : 'main-page'}`}
     >
       <div className="flex-space-between-position">
         <h2 className="navigation-desktop__header color-white">basket</h2>
         <button
           className="navigation-desktop__button color-white"
-          onClick={closeBasketMenu}
+          onClick={toggleBasketMenu}
           type="button"
           aria-expanded="false"
           aria-controls="navigation-desktop__item account"

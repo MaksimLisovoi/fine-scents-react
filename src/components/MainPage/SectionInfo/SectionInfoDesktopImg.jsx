@@ -1,4 +1,4 @@
-import infoImgDesktop3 from '../../assets/images/imgs/desktop/info-desktop-3.jpg';
+import infoImgDesktop3 from '../../../assets/images/imgs/desktop/info-desktop-3.jpg';
 
 export const SectionInfoDesktopImg = () => {
   return (

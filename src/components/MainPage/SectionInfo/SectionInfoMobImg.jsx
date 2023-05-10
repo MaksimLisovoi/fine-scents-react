@@ -1,8 +1,8 @@
-import infoImg1 from '../../assets/images/imgs/section-info-img.jpg';
-import infoImgDesktop1 from '../../assets/images/imgs/desktop/info-desktop-1.jpg';
+import infoImg1 from '../../../assets/images/imgs/section-info-img.jpg';
+import infoImgDesktop1 from '../../../assets/images/imgs/desktop/info-desktop-1.jpg';
 
-import infoImg2 from '../../assets/images/imgs/section-info-img2.jpg';
-import infoImgDesktop2 from '../../assets/images/imgs/desktop/info-desktop-2.jpg';
+import infoImg2 from '../../../assets/images/imgs/section-info-img2.jpg';
+import infoImgDesktop2 from '../../../assets/images/imgs/desktop/info-desktop-2.jpg';
 
 export const SectionInfoMobImg = () => {
   return (

@@ -1,13 +1,24 @@
 import { NavLink } from 'react-router-dom';
 
-export const About = ({ isHomePage }) => {
+export const About = ({ isHomePage, toggleAboutMenu, isOpenAboutMenu }) => {
   return (
     <div
       className={`navigation-desktop__item about ${
-        !isHomePage ? 'not-main-page' : ''
-      } `}
+        isOpenAboutMenu ? 'is-open' : ''
+      } ${!isHomePage ? 'not-main-page' : 'main-page'} `}
     >
-      <h2 className="navigation-desktop__header">about</h2>
+      <div className="flex-space-between-position">
+        <h2 className="navigation-desktop__header">about</h2>
+        <button
+          onClick={toggleAboutMenu}
+          className="navigation-desktop__button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation-desktop__item shop"
+        >
+          close
+        </button>
+      </div>
 
       <div>
         <NavLink to="about" className="navigation-desktop__section-about">

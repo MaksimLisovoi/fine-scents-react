@@ -1,4 +1,27 @@
 {
+  "applying": [
+    {
+      "id": 1,
+      "header": "Livingroom",
+      "title": "collection",
+      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those.",
+      "bg": "standart"
+    },
+    {
+      "id": 2,
+      "header": "Bathroom",
+      "title": "collection",
+      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those.",
+      "bg": "white"
+    },
+    {
+      "id": 3,
+      "header": "Wardrobe",
+      "title": "collection",
+      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those.",
+      "bg": "standart"
+    }
+  ],
   "products": [
     {
       "id": 1,
@@ -30,6 +53,7 @@
       "category": "LIVINGROOM",
       "isBestseller": false
     },
+
     {
       "id": 4,
       "type": "Room Spray",

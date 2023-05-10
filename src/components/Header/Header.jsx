@@ -8,6 +8,8 @@ export const Header = () => {
   const [isOpenMobMenu, setIsOpenMobMenu] = useState(false);
   const [isOpenAccMenu, setIsOpenAccMenu] = useState(false);
   const [isOpenBasketMenu, setIsOpenBasketMenu] = useState(false);
+  const [isOpenShopMenu, setIsOpenShopMenu] = useState(false);
+  const [isOpenAboutMenu, setIsOpenAboutMenu] = useState(false);
 
   const toggleMobMenu = () => {
     setIsOpenMobMenu(!isOpenMobMenu);
@@ -21,8 +23,15 @@ export const Header = () => {
     setIsOpenBasketMenu(!isOpenBasketMenu);
   };
 
-  const location = useLocation();
+  const toggleShopMenu = () => {
+    setIsOpenShopMenu(!isOpenShopMenu);
+  };
 
+  const toggleAboutMenu = () => {
+    setIsOpenAboutMenu(!isOpenAboutMenu);
+  };
+
+  const location = useLocation();
   const isHomePage = location.pathname === '/';
 
   return (
@@ -30,6 +39,7 @@ export const Header = () => {
       <div className="header__page">
         <div className={`${!isHomePage ? 'our-mission__header' : ''}`}>
           <MobileNav
+            isHomePage={isHomePage}
             isOpenMobMenu={isOpenMobMenu}
             closeMobMenu={toggleMobMenu}
           />
@@ -86,9 +96,13 @@ export const Header = () => {
           <DesktopNav
             isHomePage={isHomePage}
             isOpenAccMenu={isOpenAccMenu}
-            closeAccMenu={toggleAccMenu}
+            toggleAccMenu={toggleAccMenu}
             isOpenBasketMenu={isOpenBasketMenu}
-            closeBasketMenu={toggleBasketMenu}
+            toggleBasketMenu={toggleBasketMenu}
+            toggleShopMenu={toggleShopMenu}
+            isOpenShopMenu={isOpenShopMenu}
+            toggleAboutMenu={toggleAboutMenu}
+            isOpenAboutMenu={isOpenAboutMenu}
           />
         </div>
       </div>

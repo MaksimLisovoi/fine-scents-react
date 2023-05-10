@@ -8,8 +8,8 @@ import 'swiper/css/scrollbar';
 // Import Swiper styles
 import 'swiper/css';
 
-import heroImg from '../../assets/images/imgs/header-hero-desktop.jpg';
-import heroImgMobile from '../../assets/images/imgs/hero-header.jpg';
+import heroImg from '../../../assets/images/imgs/header-hero-desktop.jpg';
+import heroImgMobile from '../../../assets/images/imgs/hero-header.jpg';
 import { addZero } from 'services/addZeroFunc';
 
 export const MainSlider = () => {

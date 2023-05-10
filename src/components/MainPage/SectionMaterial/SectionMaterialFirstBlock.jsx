@@ -1,5 +1,5 @@
-import MaterialImgDesk1 from '../../assets/images/imgs/desktop/materials-desktop-1.jpg';
-import MaterialImgWalls from '../../assets/images/imgs/materials-walls.jpg';
+import MaterialImgDesk1 from '../../../assets/images/imgs/desktop/materials-desktop-1.jpg';
+import MaterialImgWalls from '../../../assets/images/imgs/materials-walls.jpg';
 
 export const SectionMaterialFirstBlock = () => {
   return (

@@ -1,14 +1,14 @@
-export const Account = ({ isOpenAccMenu, closeAccMenu, isHomePage }) => {
+export const Account = ({ isOpenAccMenu, toggleAccMenu, isHomePage }) => {
   return (
     <div
       className={`navigation-desktop__item account ${
         isOpenAccMenu ? 'is-open' : ''
-      }  ${!isHomePage ? 'not-main-page' : ''}`}
+      }  ${!isHomePage ? 'not-main-page' : 'main-page'}`}
     >
       <div className="flex-space-between-position">
         <h2 className="navigation-desktop__header">account</h2>
         <button
-          onClick={closeAccMenu}
+          onClick={toggleAccMenu}
           className="navigation-desktop__button"
           type="button"
           aria-expanded="false"

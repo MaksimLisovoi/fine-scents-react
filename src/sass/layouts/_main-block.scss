@@ -27,29 +27,42 @@
   &__pagination {
     position: absolute;
     bottom: 60px;
-    left: 45%;
     z-index: 5;
+
+    display: flex;
+    justify-content: center;
+
+    @include for-size(desktop) {
+      left: 45%;
+    }
   }
 }
 
 .main-swiper-pagination.section-gallery__pagination.main-block__pagination {
   position: absolute;
   bottom: 60px;
-  left: 45%;
   z-index: 5;
   padding-left: 0;
+
+  @include for-size(desktop) {
+    left: 45%;
+  }
+}
+.scrollbar-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .main-block__scrollbar {
   position: absolute;
   z-index: 5;
   bottom: 86px;
-  left: 45%;
-
   width: 72px;
 
   @include for-size(desktop) {
     bottom: 60px;
+    left: 45%;
   }
 }
 #main-block__slider {

@@ -5,11 +5,11 @@ import 'swiper/css/scrollbar';
 
 import { addZero } from 'services/addZeroFunc';
 
-import galleryDesktopImg1 from '../../assets/images/imgs/desktop/gallery-desktop-1.jpg';
-import galleryMobImg1 from '../../assets/images/gallery-img.jpg';
+import galleryDesktopImg1 from '../../../assets/images/imgs/desktop/gallery-desktop-1.jpg';
+import galleryMobImg1 from '../../../assets/images/gallery-img.jpg';
 
-import galleryDesktopImg2 from '../../assets/images/imgs/desktop/gallery-desktop-2.jpg';
-import galleryDesktopImg3 from '../../assets/images/imgs/desktop/gallery-desktop-3.jpg';
+import galleryDesktopImg2 from '../../../assets/images/imgs/desktop/gallery-desktop-2.jpg';
+import galleryDesktopImg3 from '../../../assets/images/imgs/desktop/gallery-desktop-3.jpg';
 
 export const GallerySlider = () => {
   return (

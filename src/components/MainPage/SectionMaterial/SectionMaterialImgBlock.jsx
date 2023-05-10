@@ -1,10 +1,10 @@
-import MaterialImgDesk2 from '../../assets/images/imgs/desktop/materials-desktop-2.jpg';
-import MaterialImgDesk3 from '../../assets/images/imgs/desktop/materials-desktop-3.jpg';
-import MaterialImgDesk4 from '../../assets/images/imgs/desktop/materials-desktop-4.jpg';
+import MaterialImgDesk2 from '../../../assets/images/imgs/desktop/materials-desktop-2.jpg';
+import MaterialImgDesk3 from '../../../assets/images/imgs/desktop/materials-desktop-3.jpg';
+import MaterialImgDesk4 from '../../../assets/images/imgs/desktop/materials-desktop-4.jpg';
 
-import MaterialImgPaper from '../../assets/images/imgs/materials-paper.jpg';
-import MaterialImgSilicone from '../../assets/images/imgs/materials-silicone.jpg';
-import MaterialImgGlass from '../../assets/images/imgs/materials-glass.jpg';
+import MaterialImgPaper from '../../../assets/images/imgs/materials-paper.jpg';
+import MaterialImgSilicone from '../../../assets/images/imgs/materials-silicone.jpg';
+import MaterialImgGlass from '../../../assets/images/imgs/materials-glass.jpg';
 
 export const SectionMaterialImgBlock = () => {
   return (

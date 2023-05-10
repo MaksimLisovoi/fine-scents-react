@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-export const MobileNav = ({ isOpenMobMenu, closeMobMenu }) => {
+export const MobileNav = ({ isOpenMobMenu, closeMobMenu, isHomePage }) => {
   return (
     <div
       className={`burger-navigation__container container ${
@@ -25,13 +25,13 @@ export const MobileNav = ({ isOpenMobMenu, closeMobMenu }) => {
           <h2 className="burger-menu__header">SHOP</h2>
           <ul className="burger-menu__list">
             <li>
-              <NavLink to="/">Scents </NavLink>
+              <NavLink to="scents">Scents </NavLink>
             </li>
             <li>
-              <NavLink to="/">Applying </NavLink>
+              <NavLink to="applying">Applying </NavLink>
             </li>
             <li>
-              <NavLink to="/">All </NavLink>
+              <NavLink to="all">All </NavLink>
             </li>
           </ul>
         </div>
@@ -40,7 +40,7 @@ export const MobileNav = ({ isOpenMobMenu, closeMobMenu }) => {
           <h2 className="burger-menu__header">ABOUT</h2>
           <ul className="burger-menu__list">
             <li>
-              <NavLink to="/">
+              <NavLink to="about">
                 <span className="burger-menu-span">Our</span> Charity Mission
               </NavLink>
             </li>

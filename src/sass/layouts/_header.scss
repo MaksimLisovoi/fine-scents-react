@@ -27,32 +27,32 @@
 //   }
 // }
 
-.header {
-  position: fixed;
-  top: -120px;
-  width: 100%;
-  left: 0;
-  z-index: 50;
-  background-color: $secondary-gray-background-color;
-  // background-color: #fff;
-  transition: top 400ms ease-in-out;
-  height: 120px;
+// .header {
+//   position: fixed;
+//   top: -120px;
+//   width: 100%;
+//   left: 0;
+//   z-index: 50;
+//   background-color: $secondary-gray-background-color;
+//   // background-color: #fff;
+//   transition: top 400ms ease-in-out;
+//   height: 120px;
 
-  @include for-size(desktop) {
-    position: fixed;
-    height: 80px;
-  }
+//   @include for-size(desktop) {
+//     position: fixed;
+//     height: 80px;
+//   }
 
-  &--transparent-bg {
-    background-color: transparent;
-  }
+//   &--transparent-bg {
+//     background-color: transparent;
+//   }
 
-  &--visible {
-    top: 0;
+//   &--visible {
+//     top: 0;
 
-    transition: top 200ms ease-in-out; // shows up twice as fast, than it hides
-  }
-}
+//     transition: top 200ms ease-in-out; // shows up twice as fast, than it hides
+//   }
+// }
 
 .logo {
   &__icon {

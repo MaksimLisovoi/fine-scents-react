@@ -1,11 +1,12 @@
-import { MainBlock } from 'components/MainBlock/MainBlock';
+import { MainBlock } from 'components/MainPage/MainBlock/MainBlock';
 import { Header } from 'components/Header/Header';
-import { Bestseller } from 'components/Bestseller.jsx/Bestseller';
-import { SectionAbout } from 'components/SectionAbout/SectionAbout';
-import { SectionInfo } from 'components/SectionInfo/SectionInfo';
-import { SectionMaterial } from 'components/SectionMaterial/SectionMaterial';
+import { Bestseller } from 'components/Bestseller/Bestseller';
+
 import { Footer } from 'components/Footer/Footer';
-import { Gallery } from 'components/Gallery/Gallery';
+import { Gallery } from 'components/MainPage/Gallery/Gallery';
+import { SectionAbout } from 'components/MainPage/SectionAbout/SectionAbout';
+import { SectionInfo } from 'components/MainPage/SectionInfo/SectionInfo';
+import { SectionMaterial } from 'components/MainPage/SectionMaterial/SectionMaterial';
 
 export default function Home() {
   return (

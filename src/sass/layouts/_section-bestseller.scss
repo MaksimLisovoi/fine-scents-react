@@ -69,8 +69,6 @@
       padding-top: 50px;
       padding-right: 58px;
       padding-left: 58px;
-      border-top: 1px solid #868483;
-
       margin: 0 -70px;
     }
   }
@@ -146,11 +144,11 @@
     color: $secondary-text-color;
   }
 
-  &__buttons-block {
-    @include for-size(desktop) {
-      display: none;
-    }
-  }
+  // &__buttons-block {
+  //   @include for-size(desktop) {
+  //     display: none;
+  //   }
+  // }
 }
 
 .bestseller__card.swiper-slide {
@@ -200,12 +198,12 @@
   right: -18px;
 }
 
-.bestseller-swiper-slider,
-.bathroom-swiper-slider {
-  @include for-size(desktop) {
-    margin: 0 -70px;
-  }
-}
+// .bestseller-swiper-slider,
+// .bathroom-swiper-slider {
+//   @include for-size(desktop) {
+//     margin: 0 -70px;
+//   }
+// }
 
 .bestseller__card.swiper-slide {
   height: auto;

@@ -1,4 +1,3 @@
-import { BestsellerButtons } from './BestsellerButtons';
 import { BestsellerSlider } from './BestsellerSlider';
 import { BestsellerTextBlock } from './BestsellerTextBlock';
 
@@ -8,8 +7,8 @@ export const Bestseller = () => {
       <div className="bestseller__container container">
         <div className="bestseller__body">
           <BestsellerTextBlock />
+
           <BestsellerSlider />
-          <BestsellerButtons />
         </div>
       </div>
     </section>
