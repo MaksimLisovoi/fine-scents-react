@@ -10,7 +10,7 @@ export const SectionLavanda = () => {
       <picture>
         <source srcSet={DesktopImg1} media="(min-width:800px)" />
 
-        <img className="lavanda-img" src={Img1} alt="" />
+        <img loading="lazy" className="lavanda-img" src={Img1} alt="" />
       </picture>
       <div className="container-lavanda">
         <div className="section-lavanda__block">
@@ -18,7 +18,12 @@ export const SectionLavanda = () => {
             <picture>
               <source srcSet={DesktopImg2} media="(min-width:800px)" />
 
-              <img className="lavanda-desktop-img" src={Img2} alt="" />
+              <img
+                loading="lazy"
+                className="lavanda-desktop-img"
+                src={Img2}
+                alt=""
+              />
             </picture>
             <p className="section-paragraph section-lavanda-paragraph">
               Use only those with a proven record of safety and efficacy. In

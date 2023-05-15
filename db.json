@@ -1,118 +1,128 @@
 {
   "applying": [
     {
-      "id": 1,
+      "id": "1",
+      "category": "livingroom",
       "header": "Livingroom",
       "title": "collection",
-      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those.",
-      "bg": "standart"
+      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
     },
     {
-      "id": 2,
+      "id": "2",
+      "category": "bathroom",
       "header": "Bathroom",
       "title": "collection",
-      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those.",
-      "bg": "white"
+      "description": " of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
     },
     {
-      "id": 3,
+      "id": "3",
+      "category": "wardrobe",
       "header": "Wardrobe",
       "title": "collection",
-      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those.",
-      "bg": "standart"
+      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
     }
   ],
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "type": "Scented Candle",
       "price": "120$",
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "../assets/images/imgs/desktop/bestseller-desktop-2.png",
-      "category": "LIVINGROOM",
+      "category": "livingroom",
       "isBestseller": true
     },
     {
-      "id": 2,
+      "id": "2",
       "type": "Scented Candle",
       "price": "120$",
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-2.png",
-      "category": "LIVINGROOM",
+      "category": "livingroom",
       "isBestseller": false
     },
     {
-      "id": 3,
+      "id": "3",
       "type": "Scented Candle",
       "price": "120$",
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-2.png",
-      "category": "LIVINGROOM",
+      "category": "livingroom",
       "isBestseller": false
     },
 
     {
-      "id": 4,
+      "id": "4",
       "type": "Room Spray",
       "price": "120$",
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-1.png",
-      "category": "BATHROOM",
+      "category": "bathroom",
+      "isBestseller": false
+    },
+    {
+      "id": "5",
+      "type": "Room Spray",
+      "price": "120$",
+      "name": "Mayfair Affair",
+      "url": "./images/product1.png",
+      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-1.png",
+      "category": "bathroom",
+      "isBestseller": false
+    },
+    {
+      "id": "6",
+      "type": "Room Spray",
+      "price": "120$",
+      "name": "Mayfair Affair",
+      "url": "./images/product1.png",
+      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-1.png",
+      "category": "bathroom",
+      "isBestseller": false
+    },
+    {
+      "id": "7",
+      "type": "Compact diffuser",
+      "price": "120$",
+      "name": "Mayfair Affair",
+      "url": "./images/product1.png",
+      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
+      "category": "wardrobe",
+      "isBestseller": false
+    },
+    {
+      "id": "8",
+      "type": "Compact diffuser",
+      "price": "120$",
+      "name": "Mayfair Affair",
+      "url": "./images/product1.png",
+      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
+      "category": "wardrobe",
+      "isBestseller": false
+    },
+    {
+      "id": "9",
+      "type": "Compact diffuser",
+      "price": "120$",
+      "name": "Mayfair Affair",
+      "url": "./images/product1.png",
+      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
+      "category": "wardrobe",
+      "isBestseller": false
+    },
+    {
+      "id": "10",
+      "type": "Compact diffuser",
+      "price": "120$",
+      "name": "Mayfair Affair",
+      "url": "./images/product1.png",
+      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
+      "category": "wardrobe",
       "isBestseller": true
-    },
-    {
-      "id": 5,
-      "type": "Room Spray",
-      "price": "120$",
-      "name": "Mayfair Affair",
-      "url": "./images/product1.png",
-      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-1.png",
-      "category": "BATHROOM",
-      "isBestseller": false
-    },
-    {
-      "id": 6,
-      "type": "Room Spray",
-      "price": "120$",
-      "name": "Mayfair Affair",
-      "url": "./images/product1.png",
-      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-1.png",
-      "category": "BATHROOM",
-      "isBestseller": false
-    },
-    {
-      "id": 7,
-      "type": "Compact diffuser",
-      "price": "120$",
-      "name": "Mayfair Affair",
-      "url": "./images/product1.png",
-      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
-      "category": "WARDROBE",
-      "isBestseller": true
-    },
-    {
-      "id": 8,
-      "type": "Compact diffuser",
-      "price": "120$",
-      "name": "Mayfair Affair",
-      "url": "./images/product1.png",
-      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
-      "category": "WARDROBE",
-      "isBestseller": false
-    },
-    {
-      "id": 9,
-      "type": "Compact diffuser",
-      "price": "120$",
-      "name": "Mayfair Affair",
-      "url": "./images/product1.png",
-      "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
-      "category": "WARDROBE",
-      "isBestseller": false
     }
   ]
 }

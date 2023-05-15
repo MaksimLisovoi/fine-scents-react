@@ -2,32 +2,46 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import 'swiper/css';
 
-import { getAllProducts, getBestsellers } from 'services/dbApi';
-
-import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { getCartProducts } from 'redux/selectors';
 
 import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-1.png';
 import besellerImg from '../../assets/images/product1.png';
 import { BestsellerButtons } from './BestsellerButtons';
+import { useProducts } from 'components/productsContext';
+import { addProduct } from 'redux/cartSlice';
 
-export const BestsellerSlider = () => {
-  const [bestsellers, setBestsellers] = useState([]);
+export const BestsellerSlider = ({ buttonsClasses }) => {
+  const cartProducts = useSelector(getCartProducts);
+  const products = useProducts();
 
-  useEffect(() => {
-    getBestsellers().then(setBestsellers);
-  }, []);
+  const filtered = products && products.filter(product => product.isBestseller);
 
-  console.log(bestsellers);
+  const dispatch = useDispatch();
+
+  const AddToCart = (name, type, price, id, quantity = 1) => {
+    const product = {
+      id,
+      name,
+      type,
+      price,
+      quantity,
+    };
+
+    dispatch(addProduct(product));
+  };
 
   return (
-    <div>
+    <>
       <Swiper
-        className="bestseller-cards__block"
+        className="bestseller-cards__block "
         modules={[Navigation]}
+        direction="horizontal"
         speed={800}
         navigation={{
-          nextEl: '.bestseller-next',
-          prevEl: '.bestseller-prev',
+          nextEl: buttonsClasses.next,
+          prevEl: buttonsClasses.prev,
         }}
         breakpoints={{
           320: {
@@ -43,18 +57,18 @@ export const BestsellerSlider = () => {
           },
         }}
       >
-        {bestsellers &&
-          bestsellers.map(
-            ({
-              id,
-              type,
-              price,
-              name,
-              url,
-              urlDesktop,
-              isBestseller,
-              category,
-            }) => (
+        {filtered.map(
+          ({
+            id,
+            type,
+            price,
+            name,
+            url,
+            urlDesktop,
+            isBestseller,
+            category,
+          }) => {
+            return (
               <SwiperSlide key={id} className="bestseller__card">
                 <div className="bestseller__picture-block">
                   <picture>
@@ -77,12 +91,18 @@ export const BestsellerSlider = () => {
                     {price}
                   </span>
                 </div>
-                <button className="button">QUICK SHOP</button>
+                <button
+                  className="button"
+                  onClick={() => AddToCart(name, type, price, id)}
+                >
+                  QUICK SHOP
+                </button>
               </SwiperSlide>
-            )
-          )}
+            );
+          }
+        )}
       </Swiper>
-      {bestsellers.lnegth > 3 && <BestsellerButtons />}
-    </div>
+      <BestsellerButtons filtered={filtered} />
+    </>
   );
 };

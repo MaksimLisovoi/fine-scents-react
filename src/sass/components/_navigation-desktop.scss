@@ -208,7 +208,8 @@
     // }
 
     &:hover .account-block {
-      display: block;
+      // display: block;
+      visibility: visible;
     }
   }
 

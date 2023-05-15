@@ -9,7 +9,7 @@ export const Layout = () => {
     <div className="wrapper">
       <Header />
       <main className="page">
-        <Suspense fallback={null}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>

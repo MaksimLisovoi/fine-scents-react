@@ -11,13 +11,18 @@ export const SectionInfoMobImg = () => {
         <picture>
           <source srcSet={infoImgDesktop1} media="(min-width:800px)" />
 
-          <img className="section-info__img" src={infoImg1} alt="" />
+          <img
+            loading="lazy"
+            className="section-info__img"
+            src={infoImg1}
+            alt=""
+          />
         </picture>
 
         <picture>
           <source srcSet={infoImgDesktop2} media="(min-width:800px)" />
 
-          <img src={infoImg2} alt="" />
+          <img loading="lazy" src={infoImg2} alt="" />
         </picture>
       </div>
     </div>

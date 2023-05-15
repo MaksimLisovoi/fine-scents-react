@@ -1,12 +1,14 @@
 import { About } from './About';
 import { Account } from './Account';
-import { Basket } from './Basket';
+import { Cart } from './Cart/Cart';
 import { Shop } from './Shop';
 
 import Logo from '../../assets/images/logo-desktop.svg';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const DesktopNav = ({
+  closeAboutMenu,
+  closeShopMenu,
   isOpenAccMenu,
   toggleAccMenu,
   isOpenBasketMenu,
@@ -100,11 +102,13 @@ export const DesktopNav = ({
         <Shop
           isHomePage={isHomePage}
           isOpenShopMenu={isOpenShopMenu}
+          closeShopMenu={closeShopMenu}
           toggleShopMenu={toggleShopMenu}
         />
         <About
           isHomePage={isHomePage}
           toggleAboutMenu={toggleAboutMenu}
+          closeAboutMenu={closeAboutMenu}
           isOpenAboutMenu={isOpenAboutMenu}
         />
         <Account
@@ -112,7 +116,7 @@ export const DesktopNav = ({
           isOpenAccMenu={isOpenAccMenu}
           toggleAccMenu={toggleAccMenu}
         />
-        <Basket
+        <Cart
           isHomePage={isHomePage}
           isOpenBasketMenu={isOpenBasketMenu}
           toggleBasketMenu={toggleBasketMenu}

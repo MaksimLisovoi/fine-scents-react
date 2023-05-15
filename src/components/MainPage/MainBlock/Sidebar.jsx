@@ -20,7 +20,7 @@ export const SideBar = ({ mainImg, mainImgDesktop, heading }) => {
             <source media="(min-width: 950px)" srcSet={mainImgDesktop} />
 
             <source media="(min-width: 320px)" srcSet={mainImg} />
-            <img src={mainImg} alt="" />
+            <img loading="lazy" src={mainImg} alt="" />
           </picture>
         </div>
       </div>

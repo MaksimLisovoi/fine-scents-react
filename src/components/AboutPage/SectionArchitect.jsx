@@ -31,7 +31,12 @@ export const SectionArchitect = () => {
           <picture>
             <source srcSet={DesktopImg1} media="(min-width:800px)" />
 
-            <img className="section-architect__img" src={Img1} alt="" />
+            <img
+              loading="lazy"
+              className="section-architect__img"
+              src={Img1}
+              alt=""
+            />
           </picture>
           <div className="section-architect__content-block">
             <h3 className="section__heading section-architect__heading-2">
@@ -50,7 +55,7 @@ export const SectionArchitect = () => {
             <picture>
               <source srcSet={DesktopImgDual} media="(min-width:800px)" />
 
-              <img src={ImgDual} alt="" />
+              <img loading="lazy" src={ImgDual} alt="" />
             </picture>
             <figcaption className="section-architect__caption">
               The Old Garden
@@ -60,7 +65,7 @@ export const SectionArchitect = () => {
             <picture>
               <source srcSet={DesktopImgDual2} media="(min-width:800px)" />
 
-              <img src={ImgDual2} alt="" />
+              <img loading="lazy" src={ImgDual2} alt="" />
             </picture>
             <figcaption className="section-architect__caption">
               The Old Garden
@@ -78,7 +83,7 @@ export const SectionArchitect = () => {
             <picture>
               <source srcSet={DesktopImg3} media="(min-width:800px)" />
 
-              <img src={Img3} alt="" />
+              <img loading="lazy" src={Img3} alt="" />
             </picture>
             <figcaption className="section-architect__caption caption-hidden-desktop">
               The Old Garden
@@ -91,7 +96,7 @@ export const SectionArchitect = () => {
             <picture>
               <source srcSet={DesktopImgDual3} media="(min-width:800px)" />
 
-              <img src={ImgDual3} alt="" />
+              <img loading="lazy" src={ImgDual3} alt="" />
             </picture>
             <figcaption className="section-architect__caption caption-hidden-mobile">
               The Old Garden
@@ -101,7 +106,7 @@ export const SectionArchitect = () => {
             <picture>
               <source srcSet={DesktopImgDual4} media="(min-width:800px)" />
 
-              <img src={ImgDual4} alt="" />
+              <img loading="lazy" src={ImgDual4} alt="" />
             </picture>
           </figure>
         </div>
@@ -111,7 +116,7 @@ export const SectionArchitect = () => {
             <picture>
               <source srcSet={DesktopImg5} media="(min-width:800px)" />
 
-              <img src={Img5} alt="" />
+              <img loading="lazy" src={Img5} alt="" />
             </picture>
 
             <figcaption className="section-architect__caption">

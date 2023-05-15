@@ -26,18 +26,15 @@ import { getForLivingroom } from 'services/dbApi';
 export const SectionApplying = ({ applyingType }) => {
   //   const { DesktopImg1, Img1 } = livingroom.imgs;
 
-  const { header, title, description, bg } = applyingType;
+  const { header, title, description, category } = applyingType;
 
-  const categoryName = header.toLowerCase();
-
-  const bgColor = bg === 'white';
-
-  console.log(categoryName);
+  const buttonsClasses = {
+    next: '.control-prev ',
+    prev: '.control-next ',
+  };
 
   return (
-    <section
-      className={`section-applying ${bgColor ? 'section-bathroom' : ''}`}
-    >
+    <section className="section-applying">
       <div className="container">
         <div className="section-livingroom-block">
           <div className="applying__text-block">
@@ -53,7 +50,10 @@ export const SectionApplying = ({ applyingType }) => {
         </div>
 
         <div className="bestseller__body">
-          <ApplyingSlider />
+          <ApplyingSlider
+            categoryName={category}
+            buttonsClasses={buttonsClasses}
+          />
         </div>
       </div>
     </section>

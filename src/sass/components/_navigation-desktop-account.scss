@@ -1,7 +1,9 @@
 //ACCOUNT//
 .account-block {
   @include for-size(desktop) {
-    display: none;
+    // display: none;
+    visibility: hidden;
+    transition: visibility 700ms ease-in-out;
   }
 }
 .flex-space-between-position {

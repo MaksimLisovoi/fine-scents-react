@@ -6,16 +6,9 @@ import mainImgDesktop from '../assets/images/imgs/applying-imgs/applying-hero-de
 import { useEffect, useState } from 'react';
 import { getAllApplyingTypes } from 'services/dbApi';
 import { SectionApplying } from 'components/ApplyingPage/SectionApplying';
-import { SectionLivingroom } from 'components/ApplyingPage/SectionLivingroom';
 
 export default function Applying() {
   const [applyingTypes, setApplyingTypes] = useState([]);
-
-  const [livingroomCategory, setLivingroomProducts] = useState([]);
-  const [bathroomCategory, setBathroomCategory] = useState([]);
-  const [wardrobeCategory, setWardrobeCategory] = useState([]);
-
-  const categories = [livingroomCategory, bathroomCategory, wardrobeCategory];
 
   useEffect(() => {
     getAllApplyingTypes().then(setApplyingTypes);

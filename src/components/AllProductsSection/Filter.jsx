@@ -1,18 +1,18 @@
-export const Filter = () => {
+export const Filter = ({ options, changeFilter, filter }) => {
   return (
     <ul className="section-products__controls-list">
-      <li>
-        <button className="active">All</button>
-      </li>
-      <li>
-        <button>Bathroom</button>
-      </li>
-      <li>
-        <button>Livingroom</button>
-      </li>
-      <li>
-        <button>Wardrobe</button>
-      </li>
+      {options.map(option => (
+        <li key={option}>
+          <button
+            className={`${option === filter ? 'active' : ''}`}
+            type="button"
+            name={option}
+            onClick={changeFilter}
+          >
+            {option[0].toUpperCase() + option.slice(1)}
+          </button>
+        </li>
+      ))}
     </ul>
   );
 };

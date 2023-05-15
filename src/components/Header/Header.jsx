@@ -27,11 +27,20 @@ export const Header = () => {
     setIsOpenShopMenu(!isOpenShopMenu);
   };
 
+  const closeShopMenu = () => {
+    setIsOpenShopMenu(false);
+  };
+
   const toggleAboutMenu = () => {
     setIsOpenAboutMenu(!isOpenAboutMenu);
   };
 
+  const closeAboutMenu = () => {
+    setIsOpenAboutMenu(false);
+  };
+
   const location = useLocation();
+
   const isHomePage = location.pathname === '/';
 
   return (
@@ -94,6 +103,8 @@ export const Header = () => {
           </div>
 
           <DesktopNav
+            closeShopMenu={closeShopMenu}
+            closeAboutMenu={closeAboutMenu}
             isHomePage={isHomePage}
             isOpenAccMenu={isOpenAccMenu}
             toggleAccMenu={toggleAccMenu}

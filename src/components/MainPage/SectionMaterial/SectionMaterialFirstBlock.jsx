@@ -8,7 +8,7 @@ export const SectionMaterialFirstBlock = () => {
         <picture>
           <source srcSet={MaterialImgDesk1} media="(min-width:800px)" />
 
-          <img src={MaterialImgWalls} alt="" />
+          <img loading="lazy" src={MaterialImgWalls} alt="" />
         </picture>
       </div>
       <p className="section-material__description">

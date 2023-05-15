@@ -1,10 +1,15 @@
 import { NavLink } from 'react-router-dom';
 
-export const About = ({ isHomePage, toggleAboutMenu, isOpenAboutMenu }) => {
+export const About = ({
+  isHomePage,
+  toggleAboutMenu,
+  isOpenAboutMenu,
+  closeAboutMenu,
+}) => {
   return (
     <div
       className={`navigation-desktop__item about ${
-        isOpenAboutMenu ? 'is-open' : ''
+        isOpenAboutMenu && !isHomePage ? 'is-open' : ''
       } ${!isHomePage ? 'not-main-page' : 'main-page'} `}
     >
       <div className="flex-space-between-position">
@@ -21,7 +26,11 @@ export const About = ({ isHomePage, toggleAboutMenu, isOpenAboutMenu }) => {
       </div>
 
       <div>
-        <NavLink to="about" className="navigation-desktop__section-about">
+        <NavLink
+          onClick={closeAboutMenu}
+          to="about"
+          className="navigation-desktop__section-about"
+        >
           <h3 className="about-header">Our Charity Mission</h3>
           <p className="about-paragraph">
             Our mission has always been to inspire, connect and uplift people

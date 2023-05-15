@@ -135,5 +135,7 @@
   @include for-size(desktop) {
     height: 31px;
     width: 12px;
+
+    background-image: url('../../assets/images/sidebar-btn-arrow-desktop.svg');
   }
 }

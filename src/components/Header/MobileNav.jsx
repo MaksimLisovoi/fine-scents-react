@@ -25,13 +25,19 @@ export const MobileNav = ({ isOpenMobMenu, closeMobMenu, isHomePage }) => {
           <h2 className="burger-menu__header">SHOP</h2>
           <ul className="burger-menu__list">
             <li>
-              <NavLink to="scents">Scents </NavLink>
+              <NavLink onClick={closeMobMenu} to="scents">
+                Scents
+              </NavLink>
             </li>
             <li>
-              <NavLink to="applying">Applying </NavLink>
+              <NavLink onClick={closeMobMenu} to="applying">
+                Applying
+              </NavLink>
             </li>
             <li>
-              <NavLink to="all">All </NavLink>
+              <NavLink onClick={closeMobMenu} to="all">
+                All
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -40,7 +46,7 @@ export const MobileNav = ({ isOpenMobMenu, closeMobMenu, isHomePage }) => {
           <h2 className="burger-menu__header">ABOUT</h2>
           <ul className="burger-menu__list">
             <li>
-              <NavLink to="about">
+              <NavLink onClick={closeMobMenu} to="about">
                 <span className="burger-menu-span">Our</span> Charity Mission
               </NavLink>
             </li>

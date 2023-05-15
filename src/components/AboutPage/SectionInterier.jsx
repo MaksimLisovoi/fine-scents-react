@@ -26,7 +26,12 @@ export const SectionInterier = () => {
               <picture>
                 <source srcSet={DesktopImg1} media="(min-width:800px)" />
 
-                <img className="section-interier__pic" src={Img1} alt="" />
+                <img
+                  loading="lazy"
+                  className="section-interier__pic"
+                  src={Img1}
+                  alt=""
+                />
               </picture>
             </div>
             <div>
@@ -42,7 +47,7 @@ export const SectionInterier = () => {
                 <picture>
                   <source srcSet={DesktopImg2} media="(min-width:800px)" />
 
-                  <img src={Img2} alt="" />
+                  <img loading="lazy" src={Img2} alt="" />
                 </picture>
               </div>
             </div>
@@ -69,7 +74,7 @@ export const SectionInterier = () => {
               <picture className="img-desktop-position">
                 <source srcSet={DesktopImg3} media="(min-width:800px)" />
 
-                <img src={Img3} alt="" />
+                <img loading="lazy" src={Img3} alt="" />
               </picture>
               <p className="section-paragraph section-paragraph-desktop">
                 Our objective has always been to formulate skin, hair and body
@@ -80,7 +85,12 @@ export const SectionInterier = () => {
             <picture>
               <source srcSet={DesktopImg4} media="(min-width:800px)" />
 
-              <img className="section-interier__img" src={Img4} alt="" />
+              <img
+                loading="lazy"
+                className="section-interier__img"
+                src={Img4}
+                alt=""
+              />
             </picture>
           </div>
           <div className="section-paragraph-mobile">
@@ -101,13 +111,13 @@ export const SectionInterier = () => {
             <picture className="margin-rigth-24">
               <source srcSet={DesktopImg5} media="(min-width:800px)" />
 
-              <img src={Img5} alt="" />
+              <img loading="lazy" src={Img5} alt="" />
             </picture>
 
             <picture>
               <source srcSet={DesktopImg6} media="(min-width:800px)" />
 
-              <img src={Img6} alt="" />
+              <img loading="lazy" src={Img6} alt="" />
             </picture>
           </div>
           <div className="desktop-paragraph__block">

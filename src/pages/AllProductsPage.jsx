@@ -2,19 +2,13 @@ import { useEffect, useState } from 'react';
 import { getAllProducts } from 'services/dbApi';
 import { SideBar } from 'components/MainPage/MainBlock/Sidebar';
 
-import mainImg from '../assets/images/imgs/applying-imgs/applying-hero.jpg';
-import mainImgDesktop from '../assets/images/imgs/applying-imgs/applying-hero-desktop.jpg';
+import mainImg from '../assets/images/imgs/all-products-imgs/hero-all-products.jpg';
+import mainImgDesktop from '../assets/images/imgs/all-products-imgs/hero-all-products-desktop.jpg';
 import { AllProductsSection } from 'components/AllProductsSection/AllProductsSection';
+import { useProducts } from 'components/productsContext';
+import { Gallery } from 'components/MainPage/Gallery/Gallery';
 
 export default function AllProductsPage() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    getAllProducts().then(setProducts);
-  }, []);
-
-  console.log(products);
-
   return (
     <>
       <SideBar

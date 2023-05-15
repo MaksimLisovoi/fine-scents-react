@@ -1,6 +1,24 @@
-export const BestsellerButtons = () => {
+import { useWindowSize } from 'hooks/useWindowSize';
+import { devicesWidth } from 'services/screenWidth';
+
+export const BestsellerButtons = ({ filtered }) => {
+  const size = useWindowSize();
+
+  // console.log(size.width);
+  // console.log(size.width >= devicesWidth.desktop);
+
+  const desktop = size.width >= devicesWidth.desktop;
+  const mobile = size.width < devicesWidth.tablet;
+  const tablet =
+    size.width >= devicesWidth.tablet && size.width < devicesWidth.desktop;
   return (
-    <div className="bestseller__buttons-block">
+    <div
+      className={`bestseller__buttons-block ${
+        filtered.length > 3 && desktop ? 'is-open' : ''
+      } ${filtered.length > 1 && mobile ? 'is-open' : ''} ${
+        filtered.length > 2 && tablet ? 'is-open' : ''
+      }`}
+    >
       <button className="bestseller__button bestseller-prev control-prev">
         <svg
           width="52"

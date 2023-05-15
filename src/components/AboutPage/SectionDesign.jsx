@@ -36,6 +36,7 @@ export const SectionDesign = () => {
               <source srcSet={DesktopImg1} media="(min-width:800px)" />
 
               <img
+                loading="lazy"
                 className="section-design__img section-design__img--first"
                 src={Img1}
                 alt=""
@@ -45,6 +46,7 @@ export const SectionDesign = () => {
               <source srcSet={DesktopImg2} media="(min-width:800px)" />
 
               <img
+                loading="lazy"
                 className="section-design__img section-design__img--second"
                 src={Img2}
                 alt=""

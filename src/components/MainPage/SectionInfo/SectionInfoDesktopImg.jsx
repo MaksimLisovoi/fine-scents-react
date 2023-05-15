@@ -6,7 +6,7 @@ export const SectionInfoDesktopImg = () => {
       <picture>
         <source srcSet={infoImgDesktop3} media="(min-width:800px)" />
 
-        <img src={infoImgDesktop3} alt="" />
+        <img loading="lazy" src={infoImgDesktop3} alt="" />
       </picture>
     </div>
   );

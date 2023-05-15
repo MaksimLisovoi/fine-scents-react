@@ -1,7 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 import { addZero } from 'services/addZeroFunc';
 
@@ -54,6 +52,7 @@ export const GallerySlider = () => {
           <picture className="section-gallery__picture-desktop margin-right-200">
             <source srcSet={galleryDesktopImg2} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""
@@ -62,6 +61,7 @@ export const GallerySlider = () => {
           <picture className="section-gallery__picture-desktop">
             <source srcSet={galleryDesktopImg3} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""
@@ -72,6 +72,7 @@ export const GallerySlider = () => {
           <picture>
             <source srcSet={galleryDesktopImg1} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""
@@ -87,6 +88,7 @@ export const GallerySlider = () => {
           <picture className="section-gallery__picture-desktop margin-right-200">
             <source srcSet={galleryDesktopImg2} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""
@@ -95,6 +97,7 @@ export const GallerySlider = () => {
           <picture className="section-gallery__picture-desktop">
             <source srcSet={galleryDesktopImg3} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""
@@ -105,6 +108,7 @@ export const GallerySlider = () => {
           <picture>
             <source srcSet={galleryDesktopImg1} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""
@@ -120,6 +124,7 @@ export const GallerySlider = () => {
           <picture className="section-gallery__picture-desktop margin-right-200">
             <source srcSet={galleryDesktopImg2} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""
@@ -128,6 +133,7 @@ export const GallerySlider = () => {
           <picture className="section-gallery__picture-desktop">
             <source srcSet={galleryDesktopImg3} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""
@@ -138,6 +144,7 @@ export const GallerySlider = () => {
           <picture>
             <source srcSet={galleryDesktopImg1} media="(min-width:800px)" />
             <img
+              loading="lazy"
               className="section-gallery__gallery--image"
               src={galleryMobImg1}
               alt=""

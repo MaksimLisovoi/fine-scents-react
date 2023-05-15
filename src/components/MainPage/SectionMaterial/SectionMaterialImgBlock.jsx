@@ -13,7 +13,7 @@ export const SectionMaterialImgBlock = () => {
         <picture>
           <source srcSet={MaterialImgDesk2} media="(min-width:800px)" />
 
-          <img src={MaterialImgPaper} alt="" />
+          <img loading="lazy" src={MaterialImgPaper} alt="" />
         </picture>
 
         <figcaption className="section-material__img--caption">
@@ -24,7 +24,7 @@ export const SectionMaterialImgBlock = () => {
         <picture>
           <source srcSet={MaterialImgDesk3} media="(min-width:800px)" />
 
-          <img src={MaterialImgSilicone} alt="" />
+          <img loading="lazy" src={MaterialImgSilicone} alt="" />
         </picture>
 
         <figcaption className="section-material__img--caption">
@@ -36,7 +36,7 @@ export const SectionMaterialImgBlock = () => {
         <picture>
           <source srcSet={MaterialImgDesk4} media="(min-width:800px)" />
 
-          <img src={MaterialImgGlass} alt="" />
+          <img loading="lazy" src={MaterialImgGlass} alt="" />
         </picture>
 
         <figcaption className="section-material__img--caption">

@@ -74,10 +74,10 @@
   }
 
   &__card {
-    flex: 0 1 100%;
+    flex: 0 0 100%;
 
     @media (min-width: 550px) {
-      flex: 0 1 50%;
+      flex: 0 0 50%;
       padding: 0 35px;
 
       display: flex;
@@ -86,7 +86,7 @@
 
     @include for-size(desktop) {
       padding: 0 30px;
-      flex: 0 1 33.333%;
+      flex: 0 0 33.333%;
     }
     @media (min-width: 1150px) {
       padding: 0 40px;
@@ -111,8 +111,13 @@
   &__img {
     margin: 0 auto;
 
+    // width: 340px;
+    // height: 340px;
+
     @include for-size(desktop) {
       width: 100%;
+      // width: 300px;
+      // height: 300px;
     }
   }
 
@@ -152,8 +157,16 @@
 }
 
 .bestseller__card.swiper-slide {
+  height: auto;
   @include for-size(desktop) {
     display: flex;
+  }
+}
+
+.bestseller-cards {
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -165,6 +178,7 @@
   &__block {
     @include for-size(desktop) {
       display: flex;
+
       // justify-content: center;
 
       // margin: 0 -35px;
@@ -187,15 +201,23 @@
   }
 }
 
+.bestseller__buttons-block {
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}
+
 .bestseller__button {
   position: absolute;
   bottom: 274px;
 }
 .control-prev {
-  left: -18px;
+  left: 0;
 }
 .control-next {
-  right: -18px;
+  right: 0;
 }
 
 // .bestseller-swiper-slider,
@@ -205,6 +227,13 @@
 //   }
 // }
 
-.bestseller__card.swiper-slide {
-  height: auto;
-}
+// .bestseller__card.swiper-slide {
+//   height: auto;
+// }
+// .swiper-wrapper {
+//   width: auto;
+
+//   @include for-size(desktop) {
+//     width: auto;
+//   }
+// }
