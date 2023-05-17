@@ -3,30 +3,39 @@ import { Account } from './Account';
 import { Cart } from './Cart/Cart';
 import { Shop } from './Shop';
 
+import classNames from 'classnames';
+
 import Logo from '../../assets/images/logo-desktop.svg';
 import { NavLink } from 'react-router-dom';
+import { DesktopNavlist } from './DesktopNavlist';
 
 export const DesktopNav = ({
   closeAboutMenu,
   closeShopMenu,
   isOpenAccMenu,
-  toggleAccMenu,
   isOpenBasketMenu,
-  toggleBasketMenu,
   isHomePage,
+  toggleAccMenu,
+  toggleBasketMenu,
   toggleShopMenu,
   toggleAboutMenu,
   isOpenShopMenu,
   isOpenAboutMenu,
 }) => {
+  const navDeskBlockClass = classNames('navigation-desktop', {
+    'mission-page': !isHomePage,
+  });
+
+  const navDeskNavClass = classNames('navigation-desktop__nav', {
+    'main-page': isHomePage,
+  });
+
   return (
-    <div className={`navigation-desktop ${!isHomePage ? 'mission-page' : ''} `}>
+    <div className={navDeskBlockClass}>
       {/* <NavLink to="/" className="navigation-desktop__logo">
         <img src={Logo} alt="" width={150} />
       </NavLink> */}
-      <nav
-        className={`navigation-desktop__nav ${isHomePage ? 'main-page' : ''}`}
-      >
+      <nav className={navDeskNavClass}>
         <NavLink className="logo" to="/">
           <svg
             className="logo"
@@ -50,52 +59,12 @@ export const DesktopNav = ({
           {/* <img className="logo__icon" src={Logo} alt="" /> */}
         </NavLink>
         {!isHomePage && (
-          <ul className="navigation-desktop__list">
-            <li>
-              <button
-                onClick={toggleShopMenu}
-                className="navigation-desktop__header"
-                type="button"
-                aria-expanded="false"
-                aria-controls="navigation-desktop__item shop"
-              >
-                shop
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={toggleAboutMenu}
-                className="navigation-desktop__header"
-                type="button"
-                aria-expanded="false"
-                aria-controls="navigation-desktop__item about"
-              >
-                about
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={toggleAccMenu}
-                className="navigation-desktop__header"
-                type="button"
-                aria-expanded="false"
-                aria-controls="navigation-desktop__item account"
-              >
-                account
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={toggleBasketMenu}
-                className="navigation-desktop__header"
-                type="button"
-                aria-expanded="false"
-                aria-controls="navigation-desktop__item basket"
-              >
-                basket
-              </button>
-            </li>
-          </ul>
+          <DesktopNavlist
+            toggleAccMenu={toggleAccMenu}
+            toggleBasketMenu={toggleBasketMenu}
+            toggleShopMenu={toggleShopMenu}
+            toggleAboutMenu={toggleAboutMenu}
+          />
         )}
       </nav>
       <nav className="navigation-desktop__block secondary">

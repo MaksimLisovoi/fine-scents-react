@@ -1,13 +1,33 @@
-import { getCartProducts } from 'redux/selectors';
+import {
+  getAddedToCart,
+  getCartCount,
+  getCartProducts,
+  getCartSum,
+} from 'redux/selectors';
 import { useSelector } from 'react-redux';
 
-import { CartList } from './CartList';
-import { CartItem } from './CartItem';
+import { CartBlock } from './CartBlock';
+import { CartEmptyBlock } from './CartEmptyBlock';
 
 export const Cart = ({ isOpenBasketMenu, toggleBasketMenu, isHomePage }) => {
   const cartProducts = useSelector(getCartProducts);
+  const addedProducts = useSelector(getAddedToCart);
+
+  console.log(addedProducts);
+
+  // const addedProducts = Object.keys(cartProducts).map(key => {
+  //   return cartProducts[key][0];
+  // });
+  // console.log(addedProducts);
+
+  const { count, sum } = useSelector(getCartCount);
+
+  // console.log(cartCount);
+  // console.log(cartSum);
 
   // console.log(cartProducts);
+
+  const checkAmount = count > 0 && count;
   return (
     <div
       className={`navigation-desktop__item basket  ${
@@ -15,7 +35,9 @@ export const Cart = ({ isOpenBasketMenu, toggleBasketMenu, isHomePage }) => {
       }   ${isHomePage ? 'main-page' : 'not-main-page'}`}
     >
       <div className="flex-space-between-position">
-        <h2 className="navigation-desktop__header color-white">basket</h2>
+        <h2 className="navigation-desktop__header color-white">
+          cart <span>{checkAmount}</span>
+        </h2>
         <button
           className="navigation-desktop__button color-white"
           onClick={toggleBasketMenu}
@@ -26,41 +48,16 @@ export const Cart = ({ isOpenBasketMenu, toggleBasketMenu, isHomePage }) => {
           close
         </button>
       </div>
-      <div className="basket-block">
-        <CartList>
-          {cartProducts &&
-            cartProducts.map(cartProduct => (
-              <CartItem key={cartProduct.id} cartProduct={cartProduct} />
-            ))}
-        </CartList>
-        <div className="flex-space-between-position">
-          <div className="basket-block__dilivery">
-            <label
-              className="basket-block__dilivery--option"
-              htmlFor="delivery"
-            >
-              Delivery:
-            </label>
-            <select
-              className="basket-block__dilivery--option select"
-              id="delivery"
-              name="delivery"
-            >
-              <option value="m">2 ~ 5 day</option>
-              <option value="l">Large</option>
-            </select>
-          </div>
-          <div className="basket-block__dilivery-price">
-            <span className="basket-block__dilivery--option">$ 5,50</span>
-          </div>
-        </div>
-        <div className="basket-block__total flex-space-between-position">
-          <h3 className="basket-block__total-header">Total</h3>
-          <span className="basket-block__total-sum">$ 485,50</span>
-        </div>
-
-        <button className="basket-block__btn">checkout</button>
-      </div>
+      {addedProducts.length > 0 ? (
+        <CartBlock
+          addedProducts={addedProducts}
+          sum={sum}
+          count={count}
+          checkAmount={checkAmount}
+        />
+      ) : (
+        <CartEmptyBlock />
+      )}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Scrollbar } from 'swiper';
+import { Pagination, Scrollbar, Autoplay } from 'swiper';
 
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -24,9 +24,13 @@ export const MainSlider = () => {
     //   </picture>
     // </div>
     <Swiper
-      modules={[Pagination, Scrollbar]}
+      modules={[Pagination, Scrollbar, Autoplay]}
       id="main-block__slider"
-      speed={900}
+      speed={1200}
+      loop={true}
+      autoplay={{
+        delay: 2500,
+      }}
       // spaceBetween={50}
       slidesPerView={1}
       // onSlideChange={() => console.log('slide change')}

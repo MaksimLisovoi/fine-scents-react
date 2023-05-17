@@ -26,7 +26,7 @@
     {
       "id": "1",
       "type": "Scented Candle",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "../assets/images/imgs/desktop/bestseller-desktop-2.png",
@@ -36,7 +36,7 @@
     {
       "id": "2",
       "type": "Scented Candle",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-2.png",
@@ -46,7 +46,7 @@
     {
       "id": "3",
       "type": "Scented Candle",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-2.png",
@@ -57,7 +57,7 @@
     {
       "id": "4",
       "type": "Room Spray",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-1.png",
@@ -67,27 +67,27 @@
     {
       "id": "5",
       "type": "Room Spray",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-1.png",
       "category": "bathroom",
-      "isBestseller": false
+      "isBestseller": true
     },
     {
       "id": "6",
       "type": "Room Spray",
-      "price": "120$",
+      "price": 150,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-1.png",
       "category": "bathroom",
-      "isBestseller": false
+      "isBestseller": true
     },
     {
       "id": "7",
       "type": "Compact diffuser",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
@@ -97,7 +97,7 @@
     {
       "id": "8",
       "type": "Compact diffuser",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
@@ -107,7 +107,7 @@
     {
       "id": "9",
       "type": "Compact diffuser",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",
@@ -117,7 +117,7 @@
     {
       "id": "10",
       "type": "Compact diffuser",
-      "price": "120$",
+      "price": 120,
       "name": "Mayfair Affair",
       "url": "./images/product1.png",
       "urlDesktop": "./images/imgs/desktop/bestseller-desktop-3.png",

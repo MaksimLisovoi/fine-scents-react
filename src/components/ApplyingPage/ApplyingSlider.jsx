@@ -11,14 +11,31 @@ import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desk
 import besellerImg from '../../assets/images/product1.png';
 import { BestsellerButtons } from '../Bestseller/BestsellerButtons';
 import { useProducts } from 'components/productsContext';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectProducts } from 'redux/selectors';
+import { addProduct } from 'redux/cartSlice';
+import { BestsellerCard } from 'components/Bestseller/BestsellerCard';
 
 export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
   // console.log(livingroomProducts);
 
-  const products = useProducts();
+  const products = useSelector(selectProducts);
 
   const filtered =
     products && products.filter(product => categoryName === product.category);
+
+  const dispatch = useDispatch();
+
+  const AddToCart = (name, type, price, id) => {
+    const product = {
+      id,
+      name,
+      type,
+      price,
+    };
+
+    dispatch(addProduct(product));
+  };
 
   return (
     <>
@@ -45,22 +62,14 @@ export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
         }}
       >
         {filtered.map(({ id, type, price, name }) => (
-          <SwiperSlide key={id} className="bestseller__card">
-            <div className="bestseller__picture-block">
-              <picture>
-                <source srcSet={besellerImgDesktop} media="(min-width:800px)" />
-                <source media="(max-width: 600px)" srcSet={besellerImg} />
-                <img className="bestseller__img" src={besellerImg} alt="" />
-              </picture>
-            </div>
-            <div className="bestseller__price-block">
-              <div>
-                <h3 className="bestseller__price-block--title">{type}</h3>
-                <span className="bestseller__price-block--name">{name}</span>
-              </div>
-              <span className="bestseller__price-block--title">{price}</span>
-            </div>
-            <button className="button">QUICK SHOP</button>
+          <SwiperSlide key={id}>
+            <BestsellerCard
+              id={id}
+              type={type}
+              price={price}
+              name={name}
+              AddToCart={AddToCart}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

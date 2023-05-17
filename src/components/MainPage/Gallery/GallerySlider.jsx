@@ -14,7 +14,8 @@ export const GallerySlider = () => {
     <Swiper
       className="gallery-swiper-slider"
       modules={[Navigation, Pagination, Scrollbar]}
-      //   speed={1800}
+      speed={1800}
+      loop={true}
       navigation={{
         nextEl: '.gallery-next',
         prevEl: '.gallery-prev',

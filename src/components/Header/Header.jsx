@@ -3,6 +3,7 @@ import { MobileNav } from 'components/Header/MobileNav';
 import { BurgerNav } from './BurgerNav';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 
 export const Header = () => {
   const [isOpenMobMenu, setIsOpenMobMenu] = useState(false);
@@ -40,13 +41,14 @@ export const Header = () => {
   };
 
   const location = useLocation();
-
   const isHomePage = location.pathname === '/';
+
+  const headerBlockClass = classNames({ 'our-mission__header': !isHomePage });
 
   return (
     <header className="header header--visible header--transparent-bg">
       <div className="header__page">
-        <div className={`${!isHomePage ? 'our-mission__header' : ''}`}>
+        <div className={headerBlockClass}>
           <MobileNav
             isHomePage={isHomePage}
             isOpenMobMenu={isOpenMobMenu}

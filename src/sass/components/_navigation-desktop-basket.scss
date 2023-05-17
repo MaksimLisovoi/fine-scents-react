@@ -1,9 +1,13 @@
 //BASKET//
 .color-white {
-  color: #e5dfd3;
+  color: $footer-text-color;
 }
 .basket-block {
   padding-top: 19px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   @include for-size(desktop) {
     display: none;
 
@@ -11,50 +15,166 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+
+  &__total {
+    margin-top: 18px;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $footer-text-color;
+
+    @include for-size(desktop) {
+      padding-bottom: 26px;
+      margin-top: 25px;
+      margin-bottom: 58px;
+    }
+  }
+
+  &__total-header {
+    font-family: 'Cormorant';
+    font-weight: 700;
+    font-size: 24px;
+    color: $footer-text-color;
+  }
+
+  &__total-sum {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+
+    color: $footer-text-color;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    margin: 0 auto;
+
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: $footer-text-color;
+    border: 0.5px solid $footer-text-color;
+
+    @include for-size(desktop) {
+      height: 60px;
+    }
+  }
+
+  &__dilivery--option {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: #afafaf;
+  }
+
+  &__dilivery--option.select {
+    background-color: transparent;
+    border: none;
+  }
 }
 .basket-item {
   padding-top: 28px;
   padding-bottom: 28px;
   border-top: 1px solid #e5dfd3;
-}
-.basket-item:last-child {
-  border-bottom: 1px solid #e5dfd3;
-}
-.basket-item__title {
-  font-family: 'Cormorant';
-  font-weight: 700;
-  font-size: 20px;
 
-  color: #e5dfd3;
+  &:last-child {
+    border-bottom: 1px solid #e5dfd3;
+  }
 
-  @include for-size(desktop) {
-    font-size: 24px;
+  &__img {
+    margin-right: 46px;
+  }
+  &__title {
+    font-family: 'Cormorant';
+    font-weight: 700;
+    font-size: 20px;
+
+    color: #e5dfd3;
+
+    @include for-size(desktop) {
+      font-size: 24px;
+    }
+  }
+
+  &__name {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 12px;
+
+    color: #afafaf;
+
+    @include for-size(desktop) {
+      font-size: 14px;
+    }
+  }
+
+  &__price {
+    height: 16px;
+
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+
+    color: #e5dfd3;
+  }
+
+  &__block-position {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__amount-block {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Cormorant';
+    font-weight: 700;
+    font-size: 22px;
+
+    color: #e5dfd3;
+  }
+
+  &__amount-btn {
+    display: flex;
+    align-items: inherit;
+    width: 14px;
+    height: 20px;
+  }
+
+  &__amount {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  &__remove-btn {
+    height: 14px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 12px;
+
+    text-decoration-line: underline;
+    color: #afafaf;
+
+    @include for-size(desktop) {
+      font-size: 14px;
+    }
+  }
+
+  &__name-block {
+    padding-bottom: 31px;
   }
 }
-.basket-item__name {
-  font-family: 'Roboto';
-  font-weight: 300;
-  font-size: 12px;
 
-  color: #afafaf;
-
-  @include for-size(desktop) {
-    font-size: 14px;
-  }
-}
-.basket-item__price {
-  height: 16px;
-
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 16px;
-
-  color: #e5dfd3;
-}
-.basket-item__block-position {
-  display: flex;
-  justify-content: space-between;
-}
 .basket-name-position {
   display: flex;
 }
@@ -67,101 +187,64 @@
   padding-top: 7px;
   padding-bottom: 15px;
 }
-.basket-item__img {
-  margin-right: 46px;
-}
-.basket-item__amount-block {
-  display: flex;
-  align-items: center;
 
-  font-family: 'Cormorant';
-  font-weight: 700;
-  font-size: 22px;
-
-  color: #e5dfd3;
-}
-.basket-item__amount-btn {
-  display: flex;
-  align-items: inherit;
-  width: 14px;
-  height: 20px;
-}
-.basket-item__amount {
-  margin-left: 18px;
-  margin-right: 18px;
-}
-.basket-item__remove-btn {
-  height: 14px;
-  font-family: 'Roboto';
-  font-weight: 300;
-  font-size: 12px;
-
-  text-decoration-line: underline;
-  color: #afafaf;
-
-  @include for-size(desktop) {
-    font-size: 14px;
-  }
-}
-.basket-item__name-block {
-  padding-bottom: 31px;
-}
-.basket-block__dilivery--option {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 100%;
-  color: #afafaf;
-}
-.basket-block__dilivery--option.select {
-  background-color: transparent;
-  border: none;
-}
 .flex-space-between-position {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
-.basket-block__total {
-  margin-top: 18px;
-  margin-bottom: 22px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e5dfd3;
+
+.basket-empty {
+  padding-top: 110px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   @include for-size(desktop) {
-    padding-bottom: 26px;
-    margin-top: 25px;
-    margin-bottom: 58px;
+    padding-top: 150px;
   }
-}
-.basket-block__total-header {
-  font-family: 'Cormorant';
-  font-weight: 700;
-  font-size: 24px;
-  color: #e5dfd3;
-}
-.basket-block__total-sum {
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 16px;
 
-  color: #e5dfd3;
-}
-.basket-block__btn {
-  width: 100%;
-  height: 50px;
+  &__text-block {
+    margin: 0 auto;
+    width: 350px;
+    @include for-size(desktop) {
+    }
+  }
+  &__text {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 160%;
 
-  font-family: 'Roboto';
-  font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.04em;
 
-  color: #e5dfd3;
+    color: #e5dfd3;
 
-  border: 0.5px solid #e5dfd3;
+    @include for-size(desktop) {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+    }
 
-  @include for-size(desktop) {
-    height: 62px;
+    &:not(:last-child) {
+      margin-bottom: 32px;
+
+      @include for-size(desktop) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+  }
+
+  &__img {
+    margin: 84px auto 0 auto;
+
+    @include for-size(desktop) {
+      margin: 40px auto 0 auto;
+    }
   }
 }

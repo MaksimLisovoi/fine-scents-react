@@ -270,11 +270,11 @@
     }
 
     &:hover .basket-block {
-      display: block;
+      display: flex;
     }
 
     &.is-open .basket-block {
-      display: block;
+      display: flex;
     }
   }
 }

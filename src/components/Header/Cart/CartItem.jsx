@@ -1,7 +1,33 @@
+import { useDispatch } from 'react-redux';
 import basketImg from '../../../assets/images/imgs/desktop-menu/basket-img.jpg';
+import { addProduct, deleteProduct, minusProduct } from 'redux/cartSlice';
 
-export const CartItem = ({ cartProduct }) => {
-  const { type, price, name } = cartProduct;
+export const CartItem = ({ cartProduct, amount }) => {
+  const { type, price, name, id } = cartProduct;
+
+  const dispatch = useDispatch();
+
+  const deleteFromCart = id => {
+    dispatch(deleteProduct(id));
+  };
+
+  const minusProductFromCart = id => {
+    dispatch(minusProduct(id));
+    if (!id) {
+      deleteFromCart(id);
+    }
+  };
+
+  const AddToCart = (name, type, price, id) => {
+    const product = {
+      id,
+      name,
+      type,
+      price,
+    };
+
+    dispatch(addProduct(product));
+  };
 
   console.log(type);
   return (
@@ -15,7 +41,10 @@ export const CartItem = ({ cartProduct }) => {
               <span className="basket-item__name">{name}</span>
             </div>
             <div className="basket-item__amount-block">
-              <button className="basket-item__amount-btn">
+              <button
+                onClick={() => minusProductFromCart(id)}
+                className="basket-item__amount-btn"
+              >
                 <svg
                   width="14"
                   height="2"
@@ -26,8 +55,11 @@ export const CartItem = ({ cartProduct }) => {
                   <path d="M14 0H0V2H14V0Z" fill="#E5DFD3" />
                 </svg>
               </button>
-              <span className="basket-item__amount">1</span>
-              <button className="basket-item__amount-btn">
+              <span className="basket-item__amount">{amount}</span>
+              <button
+                onClick={() => AddToCart(name, type, price, id)}
+                className="basket-item__amount-btn"
+              >
                 <svg
                   width="14"
                   height="14"
@@ -42,8 +74,13 @@ export const CartItem = ({ cartProduct }) => {
           </div>
         </div>
         <div className="basket-price__block-position">
-          <span className="basket-item__price">{price}</span>
-          <button className="basket-item__remove-btn">Remove</button>
+          <span className="basket-item__price">{amount * price}$</span>
+          <button
+            onClick={() => deleteFromCart(id)}
+            className="basket-item__remove-btn"
+          >
+            Remove
+          </button>
         </div>
       </div>
     </li>
