@@ -3,6 +3,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // import { fetchingInProgress, fetchingSuccess, fetchingError } from './contactsSlice';
 
+axios.defaults.baseURL = 'http://localhost:9999';
+
 export const fetchProducts = createAsyncThunk(
   'contacts/fetchAll',
   async (_, thunkAPI) => {
