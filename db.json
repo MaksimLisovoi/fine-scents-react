@@ -1,0 +1,128 @@
+{
+  "applying": [
+    {
+      "id": "1",
+      "category": "livingroom",
+      "header": "Livingroom",
+      "title": "collection",
+      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
+    },
+    {
+      "id": "2",
+      "category": "bathroom",
+      "header": "Bathroom",
+      "title": "collection",
+      "description": " of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
+    },
+    {
+      "id": "3",
+      "category": "wardrobe",
+      "header": "Wardrobe",
+      "title": "collection",
+      "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "type": "Scented Candle",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-2.2c2d60623e412ec0773a.png",
+      "category": "livingroom",
+      "isBestseller": true
+    },
+    {
+      "id": "2",
+      "type": "Scented Candle",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-2.2c2d60623e412ec0773a.png",
+      "category": "livingroom",
+      "isBestseller": false
+    },
+    {
+      "id": "3",
+      "type": "Scented Candle",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-2.2c2d60623e412ec0773a.png",
+      "category": "livingroom",
+      "isBestseller": false
+    },
+
+    {
+      "id": "4",
+      "type": "Room Spray",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-3.ed1ef724f9b75c38e21b.png",
+      "category": "bathroom",
+      "isBestseller": false
+    },
+    {
+      "id": "5",
+      "type": "Room Spray",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-3.ed1ef724f9b75c38e21b.png",
+      "category": "bathroom",
+      "isBestseller": true
+    },
+    {
+      "id": "6",
+      "type": "Room Spray",
+      "price": 150,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-3.ed1ef724f9b75c38e21b.png",
+      "category": "bathroom",
+      "isBestseller": true
+    },
+    {
+      "id": "7",
+      "type": "Compact diffuser",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-1.8fe21f7bf1fbfea4b28d.png",
+      "category": "wardrobe",
+      "isBestseller": false
+    },
+    {
+      "id": "8",
+      "type": "Compact diffuser",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-1.8fe21f7bf1fbfea4b28d.png",
+      "category": "wardrobe",
+      "isBestseller": false
+    },
+    {
+      "id": "9",
+      "type": "Compact diffuser",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-1.8fe21f7bf1fbfea4b28d.png",
+      "category": "wardrobe",
+      "isBestseller": false
+    },
+    {
+      "id": "10",
+      "type": "Compact diffuser",
+      "price": 120,
+      "name": "Mayfair Affair",
+      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-1.8fe21f7bf1fbfea4b28d.png",
+      "category": "wardrobe",
+      "isBestseller": true
+    }
+  ]
+}
