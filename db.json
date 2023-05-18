@@ -28,8 +28,8 @@
       "type": "Scented Candle",
       "price": 120,
       "name": "Mayfair Affair",
-      "url": "/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
-      "urlDesktop": "/fine-scents-react/static/media/bestseller-desktop-2.2c2d60623e412ec0773a.png",
+      "url": "https://main--fine-scents.netlify.app/fine-scents-react/static/media/product1.14dfa8a139ced603beed.png",
+      "urlDesktop": "https://main--fine-scents.netlify.app/fine-scents-react/static/media/bestseller-desktop-2.2c2d60623e412ec0773a.png",
       "category": "livingroom",
       "isBestseller": true
     },
