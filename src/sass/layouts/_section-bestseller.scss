@@ -115,7 +115,7 @@
     // height: 340px;
 
     @include for-size(desktop) {
-      width: 100%;
+      // width: 100%;
       // width: 300px;
       // height: 300px;
     }
@@ -166,7 +166,8 @@
 .bestseller-cards {
   &__block {
     display: flex;
-    flex-wrap: wrap;
+    // flex-direction: column;
+    // flex-wrap: wrap;
   }
 }
 

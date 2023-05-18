@@ -3,7 +3,7 @@ import basketImg from '../../../assets/images/imgs/desktop-menu/basket-img.jpg';
 import { addProduct, deleteProduct, minusProduct } from 'redux/cartSlice';
 
 export const CartItem = ({ cartProduct, amount }) => {
-  const { type, price, name, id } = cartProduct;
+  const { type, price, name, id, urlDesktop, url } = cartProduct;
 
   const dispatch = useDispatch();
 
@@ -18,12 +18,14 @@ export const CartItem = ({ cartProduct, amount }) => {
     }
   };
 
-  const AddToCart = (name, type, price, id) => {
+  const AddToCart = (name, type, price, id, urlDesktop, url) => {
     const product = {
       id,
       name,
       type,
       price,
+      urlDesktop,
+      url,
     };
 
     dispatch(addProduct(product));
@@ -34,7 +36,9 @@ export const CartItem = ({ cartProduct, amount }) => {
     <li className="basket-item">
       <div className="basket-item__block-position">
         <div className="basket-name-position">
-          <img className="basket-item__img" src={basketImg} alt="" />
+          <div className="basket-item__img-block">
+            <img className="basket-item__img" src={urlDesktop} alt="" />
+          </div>
           <div>
             <div className="basket-item__name-block">
               <h3 className="basket-item__title">{type}</h3>
@@ -57,7 +61,9 @@ export const CartItem = ({ cartProduct, amount }) => {
               </button>
               <span className="basket-item__amount">{amount}</span>
               <button
-                onClick={() => AddToCart(name, type, price, id)}
+                onClick={() =>
+                  AddToCart(name, type, price, id, urlDesktop, url)
+                }
                 className="basket-item__amount-btn"
               >
                 <svg

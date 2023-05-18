@@ -12,6 +12,7 @@ import { DesktopNavlist } from './DesktopNavlist';
 export const DesktopNav = ({
   closeAboutMenu,
   closeShopMenu,
+  closeBasketMenu,
   isOpenAccMenu,
   isOpenBasketMenu,
   isHomePage,
@@ -89,6 +90,7 @@ export const DesktopNav = ({
           isHomePage={isHomePage}
           isOpenBasketMenu={isOpenBasketMenu}
           toggleBasketMenu={toggleBasketMenu}
+          closeBasketMenu={closeBasketMenu}
         />
       </nav>
     </div>

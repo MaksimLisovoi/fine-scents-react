@@ -1,10 +1,17 @@
 //ACCOUNT//
-.account-block {
+
+.navigation-desktop__item.account.not-main-page .account-block {
+  display: block;
+}
+.navigation-desktop__item.account.main-page .account-block {
   @include for-size(desktop) {
     // display: none;
     visibility: hidden;
     transition: visibility 700ms ease-in-out;
   }
+}
+.navigation-desktop__item.account.main-page:hover .account-block {
+  visibility: visible;
 }
 .flex-space-between-position {
   display: flex;

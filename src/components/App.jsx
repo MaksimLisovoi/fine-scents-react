@@ -8,6 +8,7 @@ import { ProductsContext } from './productsContext';
 import { fetchProducts } from 'redux/operations';
 
 import Home from 'pages/Home';
+import AllProductsPage from 'pages/AllProductsPage';
 import { useDispatch } from 'react-redux';
 
 const HomePage = lazy(() => import('../pages/Home'));
@@ -21,11 +22,11 @@ export const App = () => {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    // getAllProducts().then(setProducts);
+  // useEffect(() => {
+  //   // getAllProducts().then(setProducts);
 
-    dispatch(fetchProducts());
-  }, [dispatch]);
+  //   dispatch(fetchProducts());
+  // }, [dispatch]);
 
   return (
     <>

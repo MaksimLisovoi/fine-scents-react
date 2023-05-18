@@ -2,6 +2,7 @@ import { CartList } from './CartList';
 import { CartItem } from './CartItem';
 
 export const CartBlock = ({ addedProducts, sum, count }) => {
+  console.log(addedProducts);
   return (
     <div className="basket-block">
       <CartList>
@@ -14,7 +15,7 @@ export const CartBlock = ({ addedProducts, sum, count }) => {
             />
           ))}
       </CartList>
-      <div className="flex-space-between-position">
+      <div className="flex-space-between-position basket-block__dilivery-block">
         <div className="basket-block__dilivery">
           <label className="basket-block__dilivery--option" htmlFor="delivery">
             Delivery:

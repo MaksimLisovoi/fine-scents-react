@@ -14,10 +14,17 @@
     }
   }
 
-  &__cards-list {
+  &__block {
     padding-top: 60px;
     padding-bottom: 100px;
 
+    @include for-size(desktop) {
+      padding-top: 150px;
+      padding-bottom: 150px;
+    }
+  }
+
+  &__cards-list {
     display: flex;
     flex-wrap: wrap;
     // justify-content: center;
@@ -27,8 +34,6 @@
     }
 
     @include for-size(desktop) {
-      padding-top: 150px;
-      padding-bottom: 150px;
       justify-content: flex-start;
 
       margin: -30px;

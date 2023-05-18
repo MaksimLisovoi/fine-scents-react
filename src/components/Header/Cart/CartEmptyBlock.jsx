@@ -2,7 +2,7 @@ import Img from '../../../assets/images/imgs/desktop-menu/empty-cart.jpg';
 import DesktopImg from '../../../assets/images/imgs/desktop-menu/empty-cart-desktop.jpg';
 import { NavLink } from 'react-router-dom';
 
-export const CartEmptyBlock = () => {
+export const CartEmptyBlock = ({ closeBasketMenu }) => {
   return (
     <div className="basket-empty">
       <div className="basket-empty__text-block">
@@ -12,7 +12,11 @@ export const CartEmptyBlock = () => {
         </p>
         <p className="basket-empty__text">Pleasant shopping!</p>
       </div>
-      <NavLink to="/all" className="basket-block__btn basket-empty__btn ">
+      <NavLink
+        onClick={closeBasketMenu}
+        to="/all"
+        className="basket-block__btn basket-empty__btn "
+      >
         CONTINUE SHOPPING
       </NavLink>
 

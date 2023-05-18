@@ -1,14 +1,19 @@
-import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-1.png';
+import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-3.png';
 import besellerImg from '../../assets/images/product1.png';
 
-export const BestsellerCard = ({ id, type, price, name, AddToCart }) => {
+export const BestsellerCard = ({ product, AddToCart }) => {
+  const { id, type, price, name, urlDesktop, url } = product;
   return (
     <div className="bestseller__card">
       <div className="bestseller__picture-block">
         <picture>
-          <source srcSet={besellerImgDesktop} media="(min-width:800px)" />
-          <source media="(max-width: 600px)" srcSet={besellerImg} />
-          <img className="bestseller__img" src={besellerImg} alt="" />
+          <source
+            srcSet={`${urlDesktop} 300w`}
+            media="(min-width: 800px)"
+            sizes="300px"
+          />
+          <source media="(max-width: 600px)" srcSet={url} />
+          <img className="bestseller__img" src={url} alt="" />
         </picture>
       </div>
       <div className="bestseller__price-block">
@@ -20,7 +25,7 @@ export const BestsellerCard = ({ id, type, price, name, AddToCart }) => {
       </div>
       <button
         className="button"
-        onClick={() => AddToCart(name, type, price, id)}
+        onClick={() => AddToCart(name, type, price, id, urlDesktop, url)}
       >
         QUICK SHOP
       </button>

@@ -4,30 +4,31 @@ import 'swiper/css';
 
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { getCartProducts, selectProducts } from 'redux/selectors';
+import { selectProducts } from 'redux/selectors';
 
 import { BestsellerButtons } from './BestsellerButtons';
-import { useProducts } from 'components/productsContext';
 import { addProduct } from 'redux/cartSlice';
 import { BestsellerCard } from './BestsellerCard';
+import { fetchBestsellers } from 'redux/operations';
+import { useEffect } from 'react';
 
 export const BestsellerSlider = ({ buttonsClasses }) => {
-  const cartProducts = useSelector(getCartProducts);
-  const products = useSelector(selectProducts);
-
-  // console.log(products);
-  // const products = useProducts();
-
-  const filtered = products && products.filter(product => product.isBestseller);
-
   const dispatch = useDispatch();
 
-  const AddToCart = (name, type, price, id) => {
+  useEffect(() => {
+    dispatch(fetchBestsellers());
+  }, [dispatch]);
+
+  const products = useSelector(selectProducts);
+
+  const AddToCart = (name, type, price, id, urlDesktop, url) => {
     const product = {
       id,
       name,
       type,
       price,
+      urlDesktop,
+      url,
     };
 
     dispatch(addProduct(product));
@@ -44,7 +45,6 @@ export const BestsellerSlider = ({ buttonsClasses }) => {
           nextEl: buttonsClasses.next,
           prevEl: buttonsClasses.prev,
         }}
-        // loop={true}
         breakpoints={{
           320: {
             slidesPerView: 1,
@@ -59,21 +59,17 @@ export const BestsellerSlider = ({ buttonsClasses }) => {
           },
         }}
       >
-        {filtered.map(({ type, price, name, id }) => {
-          return (
-            <SwiperSlide key={id}>
-              <BestsellerCard
-                id={id}
-                type={type}
-                price={price}
-                name={name}
-                AddToCart={AddToCart}
-              />
-            </SwiperSlide>
-          );
-        })}
+        {products &&
+          products.map(product => {
+            return (
+              <SwiperSlide key={product.id}>
+                <BestsellerCard product={product} AddToCart={AddToCart} />
+              </SwiperSlide>
+            );
+          })}
       </Swiper>
-      <BestsellerButtons filtered={filtered} />
+
+      <BestsellerButtons filtered={products} />
     </>
   );
 };

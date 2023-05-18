@@ -9,7 +9,7 @@
   justify-content: center;
   flex-direction: column;
   @include for-size(desktop) {
-    display: none;
+    // display: none;
 
     padding-top: 44px;
     padding-left: 30px;
@@ -63,8 +63,23 @@
     color: $footer-text-color;
     border: 0.5px solid $footer-text-color;
 
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      // color: $primary-gray-color;
+      background-color: $primary-black-color;
+      // border-color: $primary-black-color;
+    }
+
     @include for-size(desktop) {
-      height: 60px;
+    }
+  }
+
+  &__dilivery-block {
+    margin-top: 10px;
+
+    @include for-size(desktop) {
+      margin-top: 26px;
     }
   }
 
@@ -90,9 +105,20 @@
   &:last-child {
     border-bottom: 1px solid #e5dfd3;
   }
+  &__img-block {
+    width: 110px;
+
+    margin-right: 20px;
+
+    @include for-size(desktop) {
+      width: 116px;
+      margin-right: 46px;
+    }
+    background-color: $primary-white-color;
+  }
 
   &__img {
-    margin-right: 46px;
+    width: 100%;
   }
   &__title {
     font-family: 'Cormorant';

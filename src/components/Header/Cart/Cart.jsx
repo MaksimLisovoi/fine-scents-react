@@ -9,7 +9,12 @@ import { useSelector } from 'react-redux';
 import { CartBlock } from './CartBlock';
 import { CartEmptyBlock } from './CartEmptyBlock';
 
-export const Cart = ({ isOpenBasketMenu, toggleBasketMenu, isHomePage }) => {
+export const Cart = ({
+  isOpenBasketMenu,
+  toggleBasketMenu,
+  isHomePage,
+  closeBasketMenu,
+}) => {
   const cartProducts = useSelector(getCartProducts);
   const addedProducts = useSelector(getAddedToCart);
 
@@ -31,7 +36,7 @@ export const Cart = ({ isOpenBasketMenu, toggleBasketMenu, isHomePage }) => {
   return (
     <div
       className={`navigation-desktop__item basket  ${
-        isOpenBasketMenu ? 'is-open' : ''
+        isOpenBasketMenu && !isHomePage ? 'is-open' : ''
       }   ${isHomePage ? 'main-page' : 'not-main-page'}`}
     >
       <div className="flex-space-between-position">
@@ -56,7 +61,10 @@ export const Cart = ({ isOpenBasketMenu, toggleBasketMenu, isHomePage }) => {
           checkAmount={checkAmount}
         />
       ) : (
-        <CartEmptyBlock />
+        <CartEmptyBlock
+          closeBasketMenu={closeBasketMenu}
+          toggleBasketMenu={toggleBasketMenu}
+        />
       )}
     </div>
   );

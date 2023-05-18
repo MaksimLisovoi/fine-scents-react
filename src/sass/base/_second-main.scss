@@ -1,6 +1,7 @@
 .second-main {
-  // .second-main__body
+  height: 100vh;
 
+  // .second-main__body
   background-color: $header-sidebar-color;
   &__body {
     @include for-size(desktop) {

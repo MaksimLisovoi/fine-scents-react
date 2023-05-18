@@ -7,4 +7,11 @@
   font-family: 'Roboto';
   font-weight: 300;
   font-size: 18px;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $primary-white-color;
+    background-color: $primary-black-color;
+  }
 }

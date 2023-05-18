@@ -15,23 +15,30 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from 'redux/selectors';
 import { addProduct } from 'redux/cartSlice';
 import { BestsellerCard } from 'components/Bestseller/BestsellerCard';
+import { fetchProducts } from 'redux/operations';
 
 export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
   // console.log(livingroomProducts);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
 
   const products = useSelector(selectProducts);
 
   const filtered =
     products && products.filter(product => categoryName === product.category);
 
-  const dispatch = useDispatch();
-
-  const AddToCart = (name, type, price, id) => {
+  const AddToCart = (name, type, price, id, urlDesktop, url) => {
     const product = {
       id,
       name,
       type,
       price,
+      urlDesktop,
+      url,
     };
 
     dispatch(addProduct(product));
@@ -61,15 +68,9 @@ export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
           },
         }}
       >
-        {filtered.map(({ id, type, price, name }) => (
-          <SwiperSlide key={id}>
-            <BestsellerCard
-              id={id}
-              type={type}
-              price={price}
-              name={name}
-              AddToCart={AddToCart}
-            />
+        {filtered.map(product => (
+          <SwiperSlide key={product.id}>
+            <BestsellerCard product={product} AddToCart={AddToCart} />
           </SwiperSlide>
         ))}
       </Swiper>

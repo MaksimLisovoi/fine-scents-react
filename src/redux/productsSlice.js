@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchProducts } from './operations';
+import { fetchProducts, fetchBestsellers, fetchByCategory } from './operations';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -24,6 +24,24 @@ export const productsSlice = createSlice({
     [fetchProducts.rejected]: handleRejected,
 
     [fetchProducts.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.items = action.payload;
+    },
+
+    [fetchBestsellers.pending]: handlePending,
+    [fetchBestsellers.rejected]: handleRejected,
+
+    [fetchBestsellers.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      state.items = action.payload;
+    },
+
+    [fetchByCategory.pending]: handlePending,
+    [fetchByCategory.rejected]: handleRejected,
+
+    [fetchByCategory.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
       state.items = action.payload;

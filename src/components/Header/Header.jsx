@@ -23,6 +23,9 @@ export const Header = () => {
   const toggleBasketMenu = () => {
     setIsOpenBasketMenu(!isOpenBasketMenu);
   };
+  const closeBasketMenu = () => {
+    setIsOpenBasketMenu(false);
+  };
 
   const toggleShopMenu = () => {
     setIsOpenShopMenu(!isOpenShopMenu);
@@ -107,6 +110,7 @@ export const Header = () => {
           <DesktopNav
             closeShopMenu={closeShopMenu}
             closeAboutMenu={closeAboutMenu}
+            closeBasketMenu={closeBasketMenu}
             isHomePage={isHomePage}
             isOpenAccMenu={isOpenAccMenu}
             toggleAccMenu={toggleAccMenu}

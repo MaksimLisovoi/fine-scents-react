@@ -22,8 +22,9 @@ export const AllGallery = ({ filter, products }) => {
   return (
     <div className="section-products__body">
       <div>
-        <ul className="section-products__cards-list">
-          {/* {isLoading &&
+        <div className="section-products__block">
+          <ul className="section-products__cards-list">
+            {/* {isLoading &&
             Array(12)
               .fill(0)
               .map((_, index) => (
@@ -32,21 +33,20 @@ export const AllGallery = ({ filter, products }) => {
                   className={'section-products__card'}
                 />
               ))} */}
-          {isLoading
-            ? Array(12)
-                .fill(0)
-                .map(el => (
-                  <GalleryItemLoader className={'section-products__card'} />
-                ))
-            : products.map(product => {
-                if (product.category.toLowerCase() === filter) {
-                  return <AllGalleryItem key={product.id} product={product} />;
-                }
-                if (filter === 'all') {
-                  return <AllGalleryItem key={product.id} product={product} />;
-                }
-              })}
-        </ul>
+            {isLoading
+              ? Array(12)
+                  .fill(0)
+                  .map((el, index) => (
+                    <GalleryItemLoader
+                      key={index}
+                      className={'section-products__card'}
+                    />
+                  ))
+              : products.map(product => (
+                  <AllGalleryItem key={product.id} product={product} />
+                ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
