@@ -2,7 +2,6 @@
   "name": "fine-scents-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://maksimlisovoi.github.io/fine-scents-react",
   "dependencies": {
     "@fontsource/cormorant": "^4.5.10",
     "@fontsource/roboto": "^4.5.8",
