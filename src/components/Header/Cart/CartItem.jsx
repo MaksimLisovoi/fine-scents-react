@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import basketImg from '../../../assets/images/imgs/desktop-menu/basket-img.jpg';
+// import basketImg from '../../../assets/images/imgs/desktop-menu/basket-img.jpg';
 import { addProduct, deleteProduct, minusProduct } from 'redux/cartSlice';
 
 export const CartItem = ({ cartProduct, amount }) => {

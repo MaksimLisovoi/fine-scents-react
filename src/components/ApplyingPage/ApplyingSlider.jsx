@@ -3,14 +3,12 @@ import { Navigation } from 'swiper';
 
 import 'swiper/css';
 
-import { getAllProducts, getForLivingroom } from 'services/dbApi';
+import { useEffect } from 'react';
 
-import { useEffect, useState } from 'react';
-
-import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-1.png';
-import besellerImg from '../../assets/images/product1.png';
+// import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-1.png';
+// import besellerImg from '../../assets/images/product1.png';
 import { BestsellerButtons } from '../Bestseller/BestsellerButtons';
-import { useProducts } from 'components/productsContext';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from 'redux/selectors';
 import { addProduct } from 'redux/cartSlice';
@@ -18,8 +16,6 @@ import { BestsellerCard } from 'components/Bestseller/BestsellerCard';
 import { fetchProducts } from 'redux/operations';
 
 export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
-  // console.log(livingroomProducts);
-
   const dispatch = useDispatch();
 
   useEffect(() => {

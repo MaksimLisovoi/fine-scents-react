@@ -1,5 +1,5 @@
-import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-3.png';
-import besellerImg from '../../assets/images/product1.png';
+// import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-3.png';
+// import besellerImg from '../../assets/images/product1.png';
 
 export const BestsellerCard = ({ product, AddToCart }) => {
   const { id, type, price, name, urlDesktop, url } = product;

@@ -1,5 +1,4 @@
-import Img1 from '../../assets/images/imgs/all-products-imgs/all-product1.jpg';
-import ImgDesktop1 from '../../assets/images/imgs/all-products-imgs/all-product1-desktop.jpg';
+
 import { addProduct } from 'redux/cartSlice';
 import { useDispatch } from 'react-redux';
 

@@ -1,7 +1,6 @@
 import { Filter } from './Filter';
 import { AllGallery } from './AllGallery';
 import { useEffect, useState } from 'react';
-import { useProducts } from 'components/productsContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from 'redux/selectors';
 import { fetchByCategory, fetchProducts } from 'redux/operations';

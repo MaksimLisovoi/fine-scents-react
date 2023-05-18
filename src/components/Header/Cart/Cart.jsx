@@ -1,9 +1,4 @@
-import {
-  getAddedToCart,
-  getCartCount,
-  getCartProducts,
-  getCartSum,
-} from 'redux/selectors';
+import { getAddedToCart, getCartCount } from 'redux/selectors';
 import { useSelector } from 'react-redux';
 
 import { CartBlock } from './CartBlock';
@@ -15,7 +10,6 @@ export const Cart = ({
   isHomePage,
   closeBasketMenu,
 }) => {
-  const cartProducts = useSelector(getCartProducts);
   const addedProducts = useSelector(getAddedToCart);
 
   console.log(addedProducts);
