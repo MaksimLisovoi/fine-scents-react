@@ -2,8 +2,6 @@ import DesktopImg1 from '../../assets/images/imgs/applying-imgs/livingroom-deskt
 import Img1 from '../../assets//images/imgs/applying-imgs/livingroom.jpg';
 
 import { ApplyingSlider } from './ApplyingSlider';
-import { useEffect, useState } from 'react';
-import { getForLivingroom } from 'services/dbApi';
 
 // import DesktopImg2 from '../assets/images/imgs/applying-imgs/bathroom-desktop.jpg';
 // import Img2 from '../assets//images/imgs/applying-imgs/bathroom.jpg';

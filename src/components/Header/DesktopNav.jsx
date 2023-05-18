@@ -5,7 +5,6 @@ import { Shop } from './Shop';
 
 import classNames from 'classnames';
 
-import Logo from '../../assets/images/logo-desktop.svg';
 import { NavLink } from 'react-router-dom';
 import { DesktopNavlist } from './DesktopNavlist';
 
