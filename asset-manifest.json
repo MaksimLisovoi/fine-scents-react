@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.62d72115.css",
-    "main.js": "/static/js/main.89a30003.js",
+    "main.css": "/static/css/main.33a603ad.css",
+    "main.js": "/static/js/main.1fb756ec.js",
     "static/js/169.bb277af0.chunk.js": "/static/js/169.bb277af0.chunk.js",
-    "static/js/686.c4ab622c.chunk.js": "/static/js/686.c4ab622c.chunk.js",
+    "static/js/686.e85ee813.chunk.js": "/static/js/686.e85ee813.chunk.js",
     "static/js/317.7e487f7c.chunk.js": "/static/js/317.7e487f7c.chunk.js",
-    "static/js/33.0e186f3b.chunk.js": "/static/js/33.0e186f3b.chunk.js",
+    "static/js/33.52ea312f.chunk.js": "/static/js/33.52ea312f.chunk.js",
     "static/media/lavanda-desktop.jpg": "/static/media/lavanda-desktop.6cbfc60ac36055b39118.jpg",
     "static/media/architecture-2dual-2-desktop.jpg": "/static/media/architecture-2dual-2-desktop.8c79e6fe5e08071a844e.jpg",
     "static/media/architecture-5-desktop.jpg": "/static/media/architecture-5-desktop.5d18432adfeb1a24784a.jpg",
@@ -74,7 +74,9 @@
     "static/media/header-hero-desktop.jpg": "/static/media/header-hero-desktop.683adfbd60ed5c9595f4.jpg",
     "static/media/mission-interier-3.jpg": "/static/media/mission-interier-3.1ce621025a684a447078.jpg",
     "static/media/materials-paper.jpg": "/static/media/materials-paper.061357c4d9905ad435b0.jpg",
+    "static/media/bestseller-desktop-3.png": "/static/media/bestseller-desktop-3.ed1ef724f9b75c38e21b.png",
     "static/media/gallery-desktop-2.jpg": "/static/media/gallery-desktop-2.c2638be91265aa194e24.jpg",
+    "static/media/product1.png": "/static/media/product1.14dfa8a139ced603beed.png",
     "static/media/mission-interier-5.jpg": "/static/media/mission-interier-5.4bbbca1c4e000cf32815.jpg",
     "static/media/cormorant-latin-500-normal.woff2": "/static/media/cormorant-latin-500-normal.4f5cdc7b5a30a715de16.woff2",
     "static/media/cormorant-latin-400-normal.woff2": "/static/media/cormorant-latin-400-normal.767a4f4fca1ff65f8ba9.woff2",
@@ -131,15 +133,15 @@
     "static/media/shop-menu-arrow.svg": "/static/media/shop-menu-arrow.6b10ead441f5587dd252.svg",
     "static/media/sidebar-btn-arrow.svg": "/static/media/sidebar-btn-arrow.6521146f9bb1291403bd.svg",
     "static/media/section-about-arrow.svg": "/static/media/section-about-arrow.2956330e24fc19aa2b74.svg",
-    "main.62d72115.css.map": "/static/css/main.62d72115.css.map",
-    "main.89a30003.js.map": "/static/js/main.89a30003.js.map",
+    "main.33a603ad.css.map": "/static/css/main.33a603ad.css.map",
+    "main.1fb756ec.js.map": "/static/js/main.1fb756ec.js.map",
     "169.bb277af0.chunk.js.map": "/static/js/169.bb277af0.chunk.js.map",
-    "686.c4ab622c.chunk.js.map": "/static/js/686.c4ab622c.chunk.js.map",
+    "686.e85ee813.chunk.js.map": "/static/js/686.e85ee813.chunk.js.map",
     "317.7e487f7c.chunk.js.map": "/static/js/317.7e487f7c.chunk.js.map",
-    "33.0e186f3b.chunk.js.map": "/static/js/33.0e186f3b.chunk.js.map"
+    "33.52ea312f.chunk.js.map": "/static/js/33.52ea312f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.62d72115.css",
-    "static/js/main.89a30003.js"
+    "static/css/main.33a603ad.css",
+    "static/js/main.1fb756ec.js"
   ]
 }
