@@ -1,13 +1,41 @@
+import { addProduct } from 'redux/cartSlice';
 import { AllGalleryItem } from './AllGalleryItem';
 import { GalleryItemLoader } from './AllGalleryItemLoader';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectError, selectIsLoading } from 'redux/selectors';
+import { useCallback } from 'react';
 
-export const AllGallery = ({ filter, products }) => {
-  console.log(products);
-
+export const AllGallery = ({ products }) => {
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+
+  const dispatch = useDispatch();
+
+  // const AddToCart = (name, type, price, id, urlDesktop, url) => {
+  //   const product = {
+  //     id,
+  //     name,
+  //     type,
+  //     price,
+  //     urlDesktop,
+  //     url,
+  //   };
+
+  //   dispatch(addProduct(product));
+  // };
+
+  const AddToCart = useCallback((name, type, price, id, urlDesktop, url) => {
+    const product = {
+      id,
+      name,
+      type,
+      price,
+      urlDesktop,
+      url,
+    };
+
+    dispatch(addProduct(product));
+  }, []);
 
   const checkRequest = isLoading && !error;
   return (
@@ -24,8 +52,13 @@ export const AllGallery = ({ filter, products }) => {
                       className={'section-products__card'}
                     />
                   ))
-              : products.map(product => (
-                  <AllGalleryItem key={product.id} product={product} />
+              : products.length > 0 &&
+                products.map(product => (
+                  <AllGalleryItem
+                    key={product.id}
+                    product={product}
+                    AddToCart={AddToCart}
+                  />
                 ))}
           </ul>
         </div>

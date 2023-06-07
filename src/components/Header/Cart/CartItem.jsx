@@ -31,7 +31,6 @@ export const CartItem = ({ cartProduct, amount }) => {
     dispatch(addProduct(product));
   };
 
-  console.log(type);
   return (
     <li className="basket-item">
       <div className="basket-item__block-position">

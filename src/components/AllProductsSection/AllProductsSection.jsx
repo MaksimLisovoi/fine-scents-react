@@ -1,20 +1,20 @@
 import { Filter } from './Filter';
 import { AllGallery } from './AllGallery';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from 'redux/selectors';
-import { fetchByCategory, fetchProducts } from 'redux/operations';
+import { fetchByCategory, fetchProducts } from 'redux/products/operations';
 
 export const AllProductsSection = () => {
   const [filter, setFilter] = useState('all');
-
-  const products = useSelector(selectProducts);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
+
+  const products = useSelector(selectProducts);
 
   const fetchProductsByCategory = filter => {
     filter === 'all'
@@ -24,15 +24,14 @@ export const AllProductsSection = () => {
 
   const options = ['all', 'bathroom', 'livingroom', 'wardrobe'];
 
-  const changeFilter = e => {
+  const changeFilter = useCallback(e => {
     const { name } = e.target;
 
     setFilter(name);
 
     fetchProductsByCategory(name);
-  };
+  }, []);
 
-  console.log(filter);
   return (
     <section className="section-products">
       <div className="container">

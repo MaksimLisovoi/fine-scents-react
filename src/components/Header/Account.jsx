@@ -1,4 +1,9 @@
+import { AccountBlock } from 'components/Account/AccountBlock';
+import { SignedInUser } from 'components/Account/SignedInUser';
+import { useAuth } from 'hooks/useAuth';
+
 export const Account = ({ isOpenAccMenu, toggleAccMenu, isHomePage }) => {
+  const { isLoggedIn } = useAuth();
   return (
     <div
       className={`navigation-desktop__item account ${
@@ -17,40 +22,8 @@ export const Account = ({ isOpenAccMenu, toggleAccMenu, isHomePage }) => {
           close
         </button>
       </div>
-      <div className="account-block">
-        <div className="flex-space-between-position btn-position">
-          <button className="account-block__btn active">Sign in</button>
-          <button className="account-block__btn">Create account</button>
-        </div>
-        <div className="account__sign-in-form">
-          <form>
-            <label>
-              <input
-                type="email"
-                name="mail"
-                id="mail"
-                className="account__sign-in-form--input margin-bottom-40"
-                placeholder="Email"
-              />
-            </label>
-            <label>
-              <input
-                type="password"
-                name="password"
-                id="password"
-                className="account__sign-in-form--input"
-                placeholder="Password"
-              />
-            </label>
-            <button className="forgot-pass">Forgot Password</button>
-            <p className="account__sign-in-form--paragraph">
-              By clicking "Sign In", I agree to the Terms and Conditions and
-              Privacy Policy.
-            </p>
-            <button className="account__sign-in-form--btn">Sign in</button>
-          </form>
-        </div>
-      </div>
+
+      {isLoggedIn ? <SignedInUser /> : <AccountBlock />}
     </div>
   );
 };

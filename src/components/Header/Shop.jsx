@@ -6,8 +6,6 @@ export const Shop = ({
   toggleShopMenu,
   closeShopMenu,
 }) => {
-  console.log(isHomePage);
-
   return (
     <div
       className={`navigation-desktop__item shop ${
@@ -53,7 +51,7 @@ export const Shop = ({
           <div>
             <NavLink
               onClick={closeShopMenu}
-              to="/all"
+              to="/products"
               className="shop-item all"
             >
               <h3 className="shop__list--header">All</h3>

@@ -1,4 +1,6 @@
-export const Filter = ({ options, changeFilter, filter }) => {
+import { memo } from 'react';
+
+export const Filter = memo(({ options, changeFilter, filter }) => {
   return (
     <ul className="section-products__controls-list">
       {options.map(option => (
@@ -15,4 +17,4 @@ export const Filter = ({ options, changeFilter, filter }) => {
       ))}
     </ul>
   );
-};
+});

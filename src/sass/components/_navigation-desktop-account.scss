@@ -20,18 +20,50 @@
 .navigation-desktop__button {
   @extend .navigation-desktop__header;
   padding: 0;
-  order: -1;
 
   @include for-size(desktop) {
     order: 0;
   }
 }
 
+.signed-in {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Roboto';
+  font-size: 18px;
+  letter-spacing: 0.04em;
+
+  &__header {
+    margin-bottom: 16px;
+    font-size: 18px;
+    @include for-size(desktop) {
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__username {
+    font-weight: 400;
+  }
+}
+
 .account__sign-in-form {
   // display: none;
 }
+
+.account__sign-in-form form,
+.account__sign-up-form form {
+  display: flex;
+  flex-direction: column;
+  // display: none;
+}
 .account__sign-in-form--input {
-  width: 340px;
+  width: 100%;
+  // width: 340px;
   height: 50px;
   padding-left: 24px;
 
@@ -66,7 +98,9 @@
 .account__sign-in-form--btn {
   width: 340px;
   height: 50px;
-  margin-top: 26px;
+  margin: 26px auto 0 auto;
+  padding: 17px 0;
+  text-align: center;
 
   font-family: 'Roboto';
   font-weight: 300;
@@ -76,9 +110,17 @@
 
   color: #f7f5f3;
   background: #000000;
+
+  &.signed-in__btn {
+    margin-top: 60px;
+    @include for-size(desktop) {
+      margin-top: 50px;
+    }
+  }
 }
 
 .forgot-pass {
+  text-align: left;
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 14px;

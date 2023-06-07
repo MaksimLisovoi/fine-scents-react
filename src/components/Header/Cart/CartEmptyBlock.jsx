@@ -14,7 +14,7 @@ export const CartEmptyBlock = ({ closeBasketMenu }) => {
       </div>
       <NavLink
         onClick={closeBasketMenu}
-        to="/all"
+        to="/products"
         className="basket-block__btn basket-empty__btn "
       >
         CONTINUE SHOPPING

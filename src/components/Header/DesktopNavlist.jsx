@@ -1,9 +1,15 @@
+import { useSelector } from 'react-redux';
+import { getCartCount } from 'redux/selectors';
+
 export const DesktopNavlist = ({
   toggleAccMenu,
   toggleBasketMenu,
   toggleShopMenu,
   toggleAboutMenu,
 }) => {
+  const { count } = useSelector(getCartCount);
+
+  const checkAmount = count > 0 && count;
   return (
     <ul className="navigation-desktop__list">
       <li>
@@ -47,7 +53,7 @@ export const DesktopNavlist = ({
           aria-expanded="false"
           aria-controls="navigation-desktop__item basket"
         >
-          basket
+          cart <span>{checkAmount}</span>
         </button>
       </li>
     </ul>

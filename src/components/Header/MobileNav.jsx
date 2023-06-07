@@ -8,6 +8,7 @@ export const MobileNav = ({ isOpenMobMenu, closeMobMenu, isHomePage }) => {
       }`}
     >
       <div className="burger-navigation__controls">
+        <p className="burger-navigation__btn">MENU</p>
         <button
           className="burger-navigation__btn"
           type="button"
@@ -17,7 +18,6 @@ export const MobileNav = ({ isOpenMobMenu, closeMobMenu, isHomePage }) => {
         >
           CLOSE
         </button>
-        <p className="burger-navigation__btn">MENU</p>
       </div>
       <div className="burger-menu">
         {/* <!-- first block --> */}
@@ -35,7 +35,7 @@ export const MobileNav = ({ isOpenMobMenu, closeMobMenu, isHomePage }) => {
               </NavLink>
             </li>
             <li>
-              <NavLink onClick={closeMobMenu} to="all">
+              <NavLink onClick={closeMobMenu} to="products">
                 All
               </NavLink>
             </li>

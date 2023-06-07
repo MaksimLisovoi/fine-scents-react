@@ -1,8 +1,8 @@
-// import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-3.png';
-// import besellerImg from '../../assets/images/product1.png';
+import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-3.png';
+import besellerImg from '../../assets/images/product1.png';
 
 export const BestsellerCard = ({ product, AddToCart }) => {
-  const { id, type, price, name, urlDesktop, url } = product;
+  const { _id: id, type, price, name, urlDesktop, url } = product;
   return (
     <div className="bestseller__card">
       <div className="bestseller__picture-block">
@@ -12,8 +12,8 @@ export const BestsellerCard = ({ product, AddToCart }) => {
             media="(min-width: 800px)"
             sizes="300px"
           />
-          <source media="(max-width: 600px)" srcSet={url} />
-          <img className="bestseller__img" src={url} alt="" />
+          <source media="(max-width: 600px)" srcSet={besellerImgDesktop} />
+          <img className="bestseller__img" src={besellerImg} alt="" />
         </picture>
       </div>
       <div className="bestseller__price-block">

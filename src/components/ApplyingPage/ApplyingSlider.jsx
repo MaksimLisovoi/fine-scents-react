@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectProducts } from 'redux/selectors';
 import { addProduct } from 'redux/cartSlice';
 import { BestsellerCard } from 'components/Bestseller/BestsellerCard';
-import { fetchProducts } from 'redux/operations';
+import { fetchProducts } from 'redux/products/operations';
 
 export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
   const dispatch = useDispatch();

@@ -9,7 +9,7 @@ import { selectProducts } from 'redux/selectors';
 import { BestsellerButtons } from './BestsellerButtons';
 import { addProduct } from 'redux/cartSlice';
 import { BestsellerCard } from './BestsellerCard';
-import { fetchBestsellers } from 'redux/operations';
+import { fetchBestsellers } from 'redux/products/operations';
 import { useEffect } from 'react';
 
 export const BestsellerSlider = ({ buttonsClasses }) => {
@@ -62,7 +62,7 @@ export const BestsellerSlider = ({ buttonsClasses }) => {
         {products &&
           products.map(product => {
             return (
-              <SwiperSlide key={product.id}>
+              <SwiperSlide key={product._id}>
                 <BestsellerCard product={product} AddToCart={AddToCart} />
               </SwiperSlide>
             );

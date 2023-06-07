@@ -11,20 +11,7 @@ export const Cart = ({
   closeBasketMenu,
 }) => {
   const addedProducts = useSelector(getAddedToCart);
-
-  console.log(addedProducts);
-
-  // const addedProducts = Object.keys(cartProducts).map(key => {
-  //   return cartProducts[key][0];
-  // });
-  // console.log(addedProducts);
-
   const { count, sum } = useSelector(getCartCount);
-
-  // console.log(cartCount);
-  // console.log(cartSum);
-
-  // console.log(cartProducts);
 
   const checkAmount = count > 0 && count;
   return (
