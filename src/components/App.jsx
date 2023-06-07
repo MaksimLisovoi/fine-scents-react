@@ -7,14 +7,13 @@ import { Layout } from './Layout';
 import Home from 'pages/Home';
 import { ProductPage } from 'pages/ProductPage';
 import { useDispatch } from 'react-redux';
-import { useAuth } from 'hooks/useAuth';
 import { authOperations } from 'redux/auth';
 
 const AboutPage = lazy(() => import('../pages/AboutPage'));
 const Applying = lazy(() => import('../pages/Applying'));
 const Scents = lazy(() => import('../pages/Scents'));
 const AllProducts = lazy(() => import('../pages/AllProductsPage'));
-const Product = lazy(() => import('../pages/ProductPage'));
+// const Product = lazy(() => import('../pages/ProductPage'));
 
 export const App = () => {
   const dispatch = useDispatch();

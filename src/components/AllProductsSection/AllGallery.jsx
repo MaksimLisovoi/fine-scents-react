@@ -35,6 +35,7 @@ export const AllGallery = ({ products }) => {
     };
 
     dispatch(addProduct(product));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const checkRequest = isLoading && !error;

@@ -9,7 +9,7 @@ export const ProductPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchById(id)).then(setProduct);
-  }, []);
+  }, [dispatch, id]);
 
   console.log(product);
 

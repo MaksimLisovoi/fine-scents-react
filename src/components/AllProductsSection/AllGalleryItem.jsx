@@ -1,8 +1,3 @@
-import { addProduct } from 'redux/cartSlice';
-import { useDispatch } from 'react-redux';
-import { memo, useCallback, useMemo } from 'react';
-
-import imgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-2.png';
 import { NavLink } from 'react-router-dom';
 
 export const AllGalleryItem = ({ product, AddToCart }) => {
