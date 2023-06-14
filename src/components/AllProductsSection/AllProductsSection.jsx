@@ -30,7 +30,6 @@ export const AllProductsSection = () => {
     setFilter(name);
 
     fetchProductsByCategory(name);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
