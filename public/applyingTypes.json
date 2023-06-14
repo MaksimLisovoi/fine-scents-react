@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "category": "livingroom",
+    "header": "Livingroom",
+    "title": "collection",
+    "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
+  },
+  {
+    "id": "2",
+    "category": "bathroom",
+    "header": "Bathroom",
+    "title": "collection",
+    "description": " of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
+  },
+  {
+    "id": "3",
+    "category": "wardrobe",
+    "header": "Wardrobe",
+    "title": "collection",
+    "description": "Our objective has always been to formulate skin, hair and body care products of the finest quality; we investigate widely to source plant-based and laboratory-made ingredients, and use only those."
+  }
+]

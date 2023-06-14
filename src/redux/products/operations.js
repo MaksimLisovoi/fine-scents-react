@@ -35,8 +35,8 @@ export const fetchByCategory = createAsyncThunk(
   'contacts/fetchByCategory',
   async (category, thunkAPI) => {
     try {
-      const response = await axios.get(`/products?category=${category}`);
-      return response.data;
+      const { data } = await axios.get(`/products?category=${category}`);
+      return data.products;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }

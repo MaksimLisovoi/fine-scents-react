@@ -14,9 +14,11 @@ import { selectProducts } from 'redux/selectors';
 import { addProduct } from 'redux/cartSlice';
 import { BestsellerCard } from 'components/Bestseller/BestsellerCard';
 import { fetchProducts } from 'redux/products/operations';
+import { useCart } from 'hooks/useCart';
 
 export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
   const dispatch = useDispatch();
+  const { addToCart } = useCart();
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -26,19 +28,6 @@ export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
 
   const filtered =
     products && products.filter(product => categoryName === product.category);
-
-  const AddToCart = (name, type, price, id, urlDesktop, url) => {
-    const product = {
-      id,
-      name,
-      type,
-      price,
-      urlDesktop,
-      url,
-    };
-
-    dispatch(addProduct(product));
-  };
 
   return (
     <>
@@ -65,8 +54,8 @@ export const ApplyingSlider = ({ categoryName, buttonsClasses }) => {
         }}
       >
         {filtered.map(product => (
-          <SwiperSlide key={product.id}>
-            <BestsellerCard product={product} AddToCart={AddToCart} />
+          <SwiperSlide key={product._id}>
+            <BestsellerCard product={product} addToCart={addToCart} />
           </SwiperSlide>
         ))}
       </Swiper>

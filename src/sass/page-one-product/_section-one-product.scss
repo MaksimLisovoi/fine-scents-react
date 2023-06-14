@@ -1,0 +1,149 @@
+.section-product {
+  padding: 162px 0 183px 0;
+
+  // .section-product__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    @include for-size(desktop) {
+      flex-direction: row;
+    }
+  }
+
+  // .section-product__img-block
+
+  &__img-block {
+    margin-bottom: 20px;
+    @include for-size(desktop) {
+      margin-bottom: 0;
+      flex: 0 1 50%;
+    }
+  }
+
+  &__img-block img {
+    @include for-size(desktop) {
+      width: 100%;
+    }
+  }
+
+  // .section-product__text-block
+
+  &__text-block {
+    margin-bottom: 12px;
+
+    @include for-size(desktop) {
+      flex: 0 1 50%;
+      padding-left: 134px;
+    }
+  }
+
+  // .section-product__type
+
+  &__type {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: 'Cormorant';
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 34px;
+
+    @include for-size(desktop) {
+      font-size: 40px;
+    }
+  }
+
+  // .section-product__type-name
+
+  &__type-name {
+    font-size: inherit;
+  }
+
+  // .section-product__price
+
+  &__price {
+  }
+
+  // .section-product__title
+
+  &__title {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    /* Menu 2 */
+
+    color: $secondary-text-color;
+
+    margin-bottom: 40px;
+  }
+
+  // .section-product__amount-block
+
+  &__amount-block {
+    margin-bottom: 22px;
+    color: $primary-text-color;
+  }
+
+  &__amount {
+    font-size: 24px;
+  }
+
+  // .section-product__descr-block
+
+  &__descr-block {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 160%;
+    /* or 26px */
+
+    letter-spacing: 0.04em;
+
+    padding-bottom: 14px;
+    border-bottom: 1px solid #868483;
+  }
+
+  // .section-product__description
+
+  &__description {
+    margin-bottom: 18px;
+  }
+
+  // .section-product__values
+
+  &__values {
+  }
+
+  &__btn {
+    margin-top: 50px;
+  }
+}
+
+.product-options {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+
+  letter-spacing: 0.04em;
+  padding-top: 34px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #868483;
+
+  // .product-options__name
+
+  &__name {
+    font-weight: 500;
+    margin-right: 12px;
+  }
+
+  // .product-options__title
+
+  &__title {
+    font-weight: 400;
+  }
+}

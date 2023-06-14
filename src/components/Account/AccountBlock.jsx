@@ -7,8 +7,6 @@ export const AccountBlock = () => {
   const [isRegisterSelect, setIsRegisterSelect] = useState(false);
   const [isLogInSelect, setIsLogInSelect] = useState(true);
 
-  console.log(isLogInSelect);
-
   const onRegisterClick = () => {
     setIsRegisterSelect(true);
     setIsLogInSelect(false);

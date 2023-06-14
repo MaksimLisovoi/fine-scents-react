@@ -25,7 +25,7 @@ export default function Applying() {
 
       {applyingTypes &&
         applyingTypes.map(applyingType => (
-          <SectionApplying key={applyingType.id} applyingType={applyingType} />
+          <SectionApplying key={applyingType._id} applyingType={applyingType} />
         ))}
     </>
   );

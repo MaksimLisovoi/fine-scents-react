@@ -1,35 +1,9 @@
-import { useDispatch } from 'react-redux';
-// import basketImg from '../../../assets/images/imgs/desktop-menu/basket-img.jpg';
-import { addProduct, deleteProduct, minusProduct } from 'redux/cartSlice';
+import { useCart } from 'hooks/useCart';
 
 export const CartItem = ({ cartProduct, amount }) => {
   const { type, price, name, id, urlDesktop, url } = cartProduct;
 
-  const dispatch = useDispatch();
-
-  const deleteFromCart = id => {
-    dispatch(deleteProduct(id));
-  };
-
-  const minusProductFromCart = id => {
-    dispatch(minusProduct(id));
-    if (!id) {
-      deleteFromCart(id);
-    }
-  };
-
-  const AddToCart = (name, type, price, id, urlDesktop, url) => {
-    const product = {
-      id,
-      name,
-      type,
-      price,
-      urlDesktop,
-      url,
-    };
-
-    dispatch(addProduct(product));
-  };
+  const { deleteFromCart, minusProductFromCart, addToCart } = useCart();
 
   return (
     <li className="basket-item">
@@ -58,10 +32,11 @@ export const CartItem = ({ cartProduct, amount }) => {
                   <path d="M14 0H0V2H14V0Z" fill="#E5DFD3" />
                 </svg>
               </button>
+              {/* <span className="basket-item__amount">{amount}</span> */}
               <span className="basket-item__amount">{amount}</span>
               <button
                 onClick={() =>
-                  AddToCart(name, type, price, id, urlDesktop, url)
+                  addToCart(name, type, price, id, urlDesktop, url)
                 }
                 className="basket-item__amount-btn"
               >

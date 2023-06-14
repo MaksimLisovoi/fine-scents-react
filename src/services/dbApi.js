@@ -10,11 +10,22 @@ export async function getAllProducts() {
   }
 }
 
+export async function getProductById(id) {
+  try {
+    const product = await axios.get(`/products/${id}`);
+
+    return product.data;
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
 export async function getAllApplyingTypes() {
   try {
-    const allProducts = await axios.get(`/applying`);
+    const { data } = await axios.get(`/applying`);
+    console.log(data.applyingTypes);
 
-    return allProducts.data;
+    return data.applyingTypes;
   } catch (error) {
     console.error(error.message);
   }

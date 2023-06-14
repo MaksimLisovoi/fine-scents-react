@@ -7,13 +7,15 @@ import { useSelector } from 'react-redux';
 import { selectProducts } from 'redux/selectors';
 
 import { BestsellerButtons } from './BestsellerButtons';
-import { addProduct } from 'redux/cartSlice';
 import { BestsellerCard } from './BestsellerCard';
 import { fetchBestsellers } from 'redux/products/operations';
 import { useEffect } from 'react';
+import { useCart } from 'hooks/useCart';
 
 export const BestsellerSlider = ({ buttonsClasses }) => {
   const dispatch = useDispatch();
+
+  const { addToCart } = useCart();
 
   useEffect(() => {
     dispatch(fetchBestsellers());
@@ -21,18 +23,18 @@ export const BestsellerSlider = ({ buttonsClasses }) => {
 
   const products = useSelector(selectProducts);
 
-  const AddToCart = (name, type, price, id, urlDesktop, url) => {
-    const product = {
-      id,
-      name,
-      type,
-      price,
-      urlDesktop,
-      url,
-    };
+  // const AddToCart = (name, type, price, id, urlDesktop, url) => {
+  //   const product = {
+  //     id,
+  //     name,
+  //     type,
+  //     price,
+  //     urlDesktop,
+  //     url,
+  //   };
 
-    dispatch(addProduct(product));
-  };
+  //   dispatch(addProduct(product));
+  // };
 
   return (
     <>
@@ -63,7 +65,7 @@ export const BestsellerSlider = ({ buttonsClasses }) => {
           products.map(product => {
             return (
               <SwiperSlide key={product._id}>
-                <BestsellerCard product={product} AddToCart={AddToCart} />
+                <BestsellerCard product={product} addToCart={addToCart} />
               </SwiperSlide>
             );
           })}

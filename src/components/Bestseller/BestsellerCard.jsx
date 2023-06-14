@@ -1,34 +1,38 @@
-import besellerImgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-3.png';
-import besellerImg from '../../assets/images/product1.png';
+import { NavLink } from 'react-router-dom';
 
-export const BestsellerCard = ({ product, AddToCart }) => {
+import img from '../../assets/images/product1.png';
+import imgDesktop from '../../assets/images/imgs/desktop/bestseller-desktop-1.png';
+import imgDesktop2 from '../../assets/images/imgs/desktop/bestseller-desktop-3.png';
+
+console.log(imgDesktop);
+
+export const BestsellerCard = ({ product, addToCart }) => {
   const { _id: id, type, price, name, urlDesktop, url } = product;
+
+  console.log(urlDesktop);
   return (
-    <div className="bestseller__card">
-      <div className="bestseller__picture-block">
-        <picture>
-          <source
-            srcSet={`${urlDesktop} 300w`}
-            media="(min-width: 800px)"
-            sizes="300px"
-          />
-          <source media="(max-width: 600px)" srcSet={besellerImgDesktop} />
-          <img className="bestseller__img" src={besellerImg} alt="" />
-        </picture>
-      </div>
-      <div className="bestseller__price-block">
-        <div>
-          <h3 className="bestseller__price-block--title">{type}</h3>
-          <span className="bestseller__price-block--name">{name}</span>
+    <NavLink to={`/products/${id}`}>
+      <div className="bestseller__card">
+        <div className="bestseller__picture-block">
+          <picture>
+            <source media="(min-width: 800px)" srcSet={urlDesktop} />
+            <img className="bestseller__img" src={url} alt="" />
+          </picture>
         </div>
-        <span className="bestseller__price-block--title">{price}$</span>
+        <div className="bestseller__price-block">
+          <div>
+            <h3 className="bestseller__price-block--title">{type}</h3>
+            <span className="bestseller__price-block--name">{name}</span>
+          </div>
+          <span className="bestseller__price-block--title">{price}$</span>
+        </div>
+        <button
+          className="button"
+          onClick={() => addToCart(name, type, price, id, urlDesktop, url)}
+        >
+          QUICK SHOP
+        </button>
       </div>
-      <button
-        className="button"
-        onClick={() => AddToCart(name, type, price, id, urlDesktop, url)}
-      >
-        QUICK SHOP
-      </button>
-    </div>
+    </NavLink>
   );
 };

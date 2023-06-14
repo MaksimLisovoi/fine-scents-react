@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper';
 
-import { addZero } from 'services/addZeroFunc';
+import { addZero } from 'services/helpFuncs';
 
 import galleryDesktopImg1 from '../../../assets/images/imgs/desktop/gallery-desktop-1.jpg';
 import galleryMobImg1 from '../../../assets/images/gallery-img.jpg';
