@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // import { fetchingInProgress, fetchingSuccess, fetchingError } from './contactsSlice';
 
-axios.defaults.baseURL = 'http://localhost:3000/api';
+axios.defaults.baseURL = 'https://fine-scents-backend.onrender.com/api';
 
 export const fetchProducts = createAsyncThunk(
   'contacts/fetchAll',
